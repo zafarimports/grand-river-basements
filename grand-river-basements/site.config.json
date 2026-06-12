@@ -1,0 +1,24 @@
+{
+  "brand": "Grand River Basements",
+  "mark": "GR",
+  "domain": "https://www.grandriverbasement.ca",
+  "phone": "(226) 789-5819",
+  "phoneTel": "12267895819",
+  "email": "info@grandriverbasement.ca",
+  "region": "Grand River region",
+  "regionAreaName": "Cambridge & the Grand River region",
+  "regionLocAdj": "Cambridge-area",
+  "geo": { "lat": 43.3616, "lng": -80.3144 },
+  "address": { "street": "123 Example St", "city": "Cambridge", "region": "ON", "postal": "N1R 0A0" },
+  "cities": [
+    { "slug": "cambridge", "name": "Cambridge" },
+    { "slug": "kitchener", "name": "Kitchener" },
+    { "slug": "waterloo", "name": "Waterloo" },
+    { "slug": "guelph", "name": "Guelph" },
+    { "slug": "paris", "name": "Paris" }
+  ],
+  "integrations": {
+    "leadEndpoint": "https://zlexgdjjtkizcglwvjyj.supabase.co/functions/v1/notify-lead",
+    "calcomUrl": "grandriverbasements/free-estimate-consultation"
+  }
+}

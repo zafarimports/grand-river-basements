@@ -1,0 +1,33 @@
+# build output
+grand-river-basements/dist/
+
+# Supabase CLI local state
+grand-river-basements/supabase/.temp/
+grand-river-basements/supabase/.branches/
+
+# dependencies
+grand-river-basements/node_modules/
+node_modules/
+
+# Claude Code session state
+.claude/skills/
+.playwright-mcp/
+
+# audit / preview screenshots (generated)
+audit-*.png
+audit-*.jpeg
+preview-*.png
+preview-*.jpeg
+cal-*.png
+
+# logs and OS junk
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editor
+.vscode/
+.idea/
+*.swp
+*~
