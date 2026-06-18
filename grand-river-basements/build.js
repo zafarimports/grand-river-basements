@@ -104,7 +104,7 @@ for (const p of pages) {
 // copy static assets
 fs.copyFileSync(path.join(ROOT, 'src', 'styles.css'), path.join(DIST, 'styles.css'));
 fs.copyFileSync(path.join(ROOT, 'src', 'app.js'), path.join(DIST, 'app.js'));
-for (const f of ['hero.webp','ba-before.webp','ba-after.webp','p1-white-kitchen.webp','p2-walnut-kitchen.webp','p3-bathroom.webp','p4-exterior.webp','areas-feature.webp']) {
+for (const f of ['hero.webp','ba-before.webp','ba-after.webp','p1-white-kitchen.webp','p2-walnut-kitchen.webp','p3-bathroom.webp','p4-exterior.webp','areas-feature.webp','logo.png']) {
   fs.copyFileSync(path.join(ROOT, 'src', f), path.join(DIST, f));
 }
 

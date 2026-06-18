@@ -55,9 +55,11 @@ const baRange = document.getElementById('baRange');
 if (baRange) {
   const baBefore = document.getElementById('baBefore');
   const baHandle = document.getElementById('baHandle');
+  const baKnob = document.getElementById('baKnob');
   const apply = v => {
     baBefore.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
     baHandle.style.left = v + '%';
+    if (baKnob) baKnob.style.left = v + '%';
   };
   baRange.addEventListener('input', e => apply(e.target.value));
   apply(baRange.value); // initialise to current value (default 50)
