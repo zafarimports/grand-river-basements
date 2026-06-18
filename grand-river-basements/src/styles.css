@@ -267,7 +267,6 @@ html.nav-open{overflow:hidden}
 .gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:28px}
 .gcard{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,box-shadow .35s ease}
 .gcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.gcard-feature{grid-row:span 2}
 .gcard-feature .gcard-photo{aspect-ratio:1100/720;flex:1}
 .gcard-photo{margin:0;overflow:hidden;background:var(--paper-3);aspect-ratio:1100/720}
 .gcard-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
