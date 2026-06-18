@@ -237,18 +237,57 @@ html.nav-open{overflow:hidden}
 @media (max-width:560px){.svcs{grid-template-columns:1fr}}
 
 /* ==========================================================================
-   RECENT WORK — feature project
+   BEFORE / AFTER — drag-to-reveal slider
    ========================================================================== */
-.work-feature{display:grid;grid-template-columns:1.45fr 1fr;gap:50px;align-items:stretch}
-.wf-photo{margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--paper-2);box-shadow:var(--shadow-lg);align-self:stretch;position:relative}
-.wf-photo img{width:100%;height:100%;object-fit:cover;display:block;min-height:380px}
-.wf-info{display:flex;flex-direction:column;gap:18px;padding:6px 0;align-self:center}
-.wf-spec{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line)}
-.wf-spec:first-of-type{border-top:1px solid var(--hairline)}
-.wf-spec:last-of-type{border-bottom:1px solid var(--line);padding-bottom:18px}
-.wf-spec .k{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:600;padding-top:3px}
-.wf-spec .v{font-family:var(--serif);font-size:1.04rem;color:var(--pine-2);line-height:1.4;font-weight:500;font-variation-settings:"opsz" 144}
-@media (max-width:880px){.work-feature{grid-template-columns:1fr;gap:34px}.wf-photo img{min-height:260px}}
+.ba{margin:0}
+.ba-stage{position:relative;aspect-ratio:1600/810;border-radius:var(--r-lg);overflow:hidden;background:var(--paper-2);box-shadow:var(--shadow-lg);user-select:none;touch-action:none}
+.ba-after{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba-before-wrap{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 50% 0 0);will-change:clip-path}
+.ba-before-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 24px rgba(0,0,0,.35);pointer-events:none;z-index:3}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ink);box-shadow:0 8px 24px rgba(0,0,0,.35);pointer-events:none}
+.ba-knob svg{width:28px;height:28px}
+.ba-tag{position:absolute;top:18px;font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(27,30,28,.78);backdrop-filter:blur(6px);padding:7px 14px;border-radius:999px;z-index:2;pointer-events:none}
+.ba-tag-l{left:18px}
+.ba-tag-r{right:18px}
+#baRange{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0;padding:0;background:transparent;border:none}
+#baRange::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:100%;height:100%;cursor:ew-resize;opacity:0}
+#baRange::-moz-range-thumb{width:100%;height:100%;cursor:ew-resize;opacity:0;border:0}
+.ba-caption{text-align:center;color:var(--ink-2);font-size:.94rem;margin:22px auto 0;max-width:68ch;line-height:1.55}
+@media (max-width:720px){
+  .ba-knob{width:44px;height:44px}
+  .ba-knob svg{width:22px;height:22px}
+  .ba-tag{font-size:.62rem;padding:5px 10px;top:12px}
+  .ba-tag-l{left:12px}.ba-tag-r{right:12px}
+}
+
+/* ==========================================================================
+   RECENT WORK — gallery of 4 projects
+   ========================================================================== */
+.gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:28px}
+.gcard{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,box-shadow .35s ease}
+.gcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.gcard-feature{grid-row:span 2}
+.gcard-feature .gcard-photo{aspect-ratio:1100/720;flex:1}
+.gcard-photo{margin:0;overflow:hidden;background:var(--paper-3);aspect-ratio:1100/720}
+.gcard-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gcard:hover .gcard-photo img{transform:scale(1.03)}
+.gcard-portrait .gcard-photo{aspect-ratio:800/1067}
+.gcard-info{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px}
+.gcard-tag{font-family:var(--sans);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);align-self:flex-start;padding:5px 10px;border:1px solid rgba(181,81,42,.4);border-radius:999px;background:rgba(181,81,42,.06)}
+.gcard h3{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--pine-2);letter-spacing:-.018em;margin:4px 0 0;font-variation-settings:"opsz" 144}
+.gcard p{color:var(--ink-2);font-size:.94rem;line-height:1.55;margin:4px 0 0;max-width:50ch}
+.gcard-meta{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding-top:14px;border-top:1px solid var(--line);margin-top:14px}
+.gcard-meta .dot{color:var(--clay);margin:0 .3em}
+.gcard-feature{grid-column:1;grid-row:1/span 2}
+@media (max-width:920px){
+  .gallery{grid-template-columns:1fr 1fr}
+  .gcard-feature{grid-column:1/-1;grid-row:auto}
+  .gcard-feature .gcard-photo{aspect-ratio:1100/720}
+}
+@media (max-width:560px){
+  .gallery{grid-template-columns:1fr}
+}
 
 /* ==========================================================================
    CALCULATOR — editorial form panel

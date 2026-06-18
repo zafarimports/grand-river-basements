@@ -52,12 +52,16 @@ calc();
 
 /* ---------- BEFORE / AFTER slider ---------- */
 const baRange = document.getElementById('baRange');
-if (baRange) baRange.addEventListener('input', e => {
-  const v = e.target.value;
-  document.getElementById('baBefore').style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
-  document.getElementById('baHandle').style.left = v + '%';
-  document.getElementById('baKnob').style.left = v + '%';
-});
+if (baRange) {
+  const baBefore = document.getElementById('baBefore');
+  const baHandle = document.getElementById('baHandle');
+  const apply = v => {
+    baBefore.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+    baHandle.style.left = v + '%';
+  };
+  baRange.addEventListener('input', e => apply(e.target.value));
+  apply(baRange.value); // initialise to current value (default 50)
+}
 
 /* ---------- ESTIMATE WIZARD ---------- */
 const RANGES = {
