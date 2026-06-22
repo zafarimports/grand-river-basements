@@ -34,7 +34,7 @@
   --r-xl:28px;
 
   /* typography */
-  --serif:'Fraunces',Cambria,Georgia,serif;
+  --serif:'Bodoni Moda',Didot,'Bodoni 72','Bodoni 72 Old Style',Cambria,Georgia,serif;
   --sans:'Spline Sans','Söhne',ui-sans-serif,system-ui,sans-serif;
 }
 
@@ -62,7 +62,7 @@ input,textarea{font:inherit;color:inherit}
 .sans{font-family:var(--sans)}
 
 /* type scale — modular, one size per role */
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:0;color:var(--pine-2);font-variation-settings:"opsz" 144}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:0;color:var(--pine-2);font-variation-settings:"opsz" 96}
 h1{font-size:clamp(2.4rem,5.2vw,4.4rem);font-weight:500;letter-spacing:-.03em;line-height:1.04}
 h2{font-size:clamp(1.9rem,3.4vw,3.2rem);font-weight:500;letter-spacing:-.022em;line-height:1.05}
 h3{font-size:1.5rem;font-weight:600;letter-spacing:-.012em;line-height:1.2}
@@ -82,7 +82,7 @@ p{margin:0 0 1em;color:var(--ink);max-width:62ch}
 .dropcap::first-letter{
   font-family:var(--serif);font-weight:500;
   float:left;font-size:5.2em;line-height:.82;padding:.06em .12em 0 0;
-  color:var(--clay);font-variation-settings:"opsz" 144;
+  color:var(--clay);font-variation-settings:"opsz" 96;
 }
 
 /* ---------------- layout ---------------- */
@@ -116,7 +116,7 @@ header.nav{
 .brand{display:inline-flex;align-items:center;line-height:0}
 .brand img{height:54px;width:auto;display:block}
 @media (max-width:560px){.brand img{height:44px}}
-.foot-wordmark{font-family:var(--serif);font-weight:500;font-size:1.5rem;color:#fff;letter-spacing:-.01em;margin:0 0 16px;line-height:1;font-variation-settings:"opsz" 144}
+.foot-wordmark{font-family:var(--serif);font-weight:500;font-size:1.5rem;color:#fff;letter-spacing:-.01em;margin:0 0 16px;line-height:1;font-variation-settings:"opsz" 96}
 .foot-wordmark .amp{color:var(--clay);margin:0 .25em;font-weight:400}
 
 .navlinks{display:flex;gap:30px;justify-self:center;font-size:.86rem;font-weight:500;color:var(--ink-2)}
@@ -193,7 +193,7 @@ html.nav-open{overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:54px;align-items:end}
 .hero .h-text{position:relative;z-index:2}
 .hero h1{margin:24px 0 26px}
-.hero h1 em{font-style:italic;color:var(--clay);font-variation-settings:"opsz" 144;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--clay);font-variation-settings:"opsz" 96;font-weight:400}
 .hero .sub{font-size:1.18rem;line-height:1.55;color:var(--ink-2);max-width:48ch;margin-bottom:38px}
 .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .hero-cta .alt{font-size:.85rem;color:var(--ink-2)}
@@ -304,7 +304,7 @@ html.nav-open{overflow:hidden}
 .range b{font-family:var(--serif);font-variant-numeric:tabular-nums;font-size:1.15rem;color:var(--pine-2);min-width:80px;text-align:right}
 
 .calc .out .o-eyebrow{color:rgba(233,227,214,.6)}
-.calc .out .o-cost{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,4.5vw,3.6rem);letter-spacing:-.02em;color:#fff;line-height:1;margin:4px 0 6px;font-variation-settings:"opsz" 144}
+.calc .out .o-cost{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,4.5vw,3.6rem);letter-spacing:-.02em;color:#fff;line-height:1;margin:4px 0 6px;font-variation-settings:"opsz" 96}
 .calc .out .o-note{font-size:.88rem;color:rgba(233,227,214,.7);max-width:38ch}
 .calc .out .o-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px;padding-top:24px;border-top:1px solid rgba(233,227,214,.16)}
 .calc .out .mini .k{color:rgba(233,227,214,.55);margin-bottom:4px}
@@ -400,7 +400,7 @@ html.nav-open{overflow:hidden}
 .wz-result h3{text-align:center;margin-bottom:22px;color:var(--pine-2)}
 .wz-result .est{text-align:center;margin-bottom:24px;padding:24px;background:var(--paper);border-radius:var(--r);border:1px solid var(--line)}
 .wz-result .est .r-lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--ink-2);font-weight:600}
-.wz-result .est .r-num{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--clay-2);margin-top:6px;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+.wz-result .est .r-num{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--clay-2);margin-top:6px;letter-spacing:-.02em;font-variation-settings:"opsz" 96}
 .ballpark-note{display:flex;gap:11px;align-items:flex-start;background:#fbf0e9;border:1px solid rgba(181,81,42,.35);border-radius:var(--r);padding:14px 16px;font-size:.9rem;color:var(--ink);margin-bottom:22px}
 .ballpark-note svg{color:var(--clay);flex-shrink:0;margin-top:2px;width:18px;height:18px}
 .cb-head{text-align:center;margin-bottom:10px}
