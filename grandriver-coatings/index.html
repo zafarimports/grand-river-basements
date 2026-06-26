@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grandriver Coatings — Premium Resin Floor Coatings · Grand River Region</title>
+<meta name="description" content="One-day polyaspartic flake floor coatings for garages, basements, patios, pool decks and commercial floors across Kitchener, Waterloo, Cambridge, Guelph, Hamilton and the Grand River region.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1A2B; --navy-2:#0F2236; --navy-3:#13283F;
+  --ink:#0B1A2B;
+  --paper:#F3F2EE; --paper-2:#EAE8E1;
+  --white:#FFFFFF;
+  --blue:#1C49A6; --blue-bright:#2E63D6;
+  --orange:#ED5A24; --orange-2:#FF6A30;
+  --gray:#C7CDD4; --steel:#8C99A8;
+  --line:rgba(255,255,255,.12);
+  --line-dark:rgba(11,26,43,.14);
+  --maxw:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--navy); color:var(--white);
+  font-family:'Archivo',sans-serif; font-weight:400; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img,canvas,svg{display:block; max-width:100%}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+.mono{font-family:'JetBrains Mono',monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--orange-2); font-weight:500}
+
+h1,h2,h3{font-weight:800; line-height:1.02; letter-spacing:-.02em; margin:0}
+h1{font-size:clamp(42px,7.4vw,104px); font-weight:900}
+h2{font-size:clamp(30px,4.6vw,58px)}
+h3{font-size:clamp(20px,2.4vw,26px); letter-spacing:-.01em}
+p{margin:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:15px;
+  padding:15px 24px; border-radius:2px; border:1.5px solid transparent; cursor:pointer;
+  transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s; font-family:'Archivo',sans-serif}
+.btn:active{transform:translateY(1px)}
+.btn-orange{background:var(--orange); color:#fff}
+.btn-orange:hover{background:var(--orange-2)}
+.btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.4)}
+.btn-ghost:hover{border-color:#fff; background:rgba(255,255,255,.06)}
+.btn-dark{background:var(--ink); color:#fff}
+.btn-dark:hover{background:#16304a}
+.btn .arr{font-family:'JetBrains Mono',monospace}
+
+/* ---------- top bar ---------- */
+.topbar{background:#06121f; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.04em; color:#aeb9c6}
+.topbar .wrap{display:flex; justify-content:space-between; align-items:center; height:38px; gap:16px}
+.topbar a{color:#cfe0ef}
+.topbar .right{display:flex; gap:20px; align-items:center}
+@media(max-width:720px){.topbar .hideSm{display:none}}
+
+/* ---------- nav ---------- */
+.nav{position:sticky; top:0; z-index:50; background:rgba(8,18,30,.86); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex; align-items:center; justify-content:space-between; height:74px}
+.brand{display:flex; align-items:center; gap:13px}
+.brand .lg{display:flex; flex-direction:column; line-height:.92}
+.brand .lg b{font-weight:900; font-size:21px; letter-spacing:-.01em}
+.brand .lg span{font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.42em; color:var(--steel); padding-left:2px}
+.navlinks{display:flex; gap:30px; align-items:center}
+.navlinks a{font-size:14.5px; font-weight:600; color:#d6dde6; transition:color .15s}
+.navlinks a:hover{color:#fff}
+.nav .navcta{display:flex; gap:12px; align-items:center}
+.menubtn{display:none; background:none; border:1px solid var(--line); color:#fff; width:44px; height:42px; border-radius:2px; font-size:20px; cursor:pointer}
+@media(max-width:1040px){
+  .navlinks{display:none; position:absolute; top:74px; left:0; right:0; background:#08121e; flex-direction:column; gap:0; padding:8px 0; border-bottom:1px solid var(--line)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:14px 24px; width:100%; border-bottom:1px solid var(--line)}
+  .menubtn{display:block}
+  .nav .navcta .btn-ghost{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative; padding:78px 0 0; overflow:hidden}
+.hero::before{content:""; position:absolute; inset:0;
+  background:
+   radial-gradient(900px 520px at 78% -8%, rgba(46,99,214,.30), transparent 60%),
+   radial-gradient(700px 480px at 8% 12%, rgba(237,90,36,.12), transparent 55%);
+  pointer-events:none}
+.blueprint{position:absolute; inset:0; opacity:.5; pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:46px 46px; mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.hero .wrap{position:relative}
+.hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr; gap:26px}}
+.hero h1{margin:18px 0 0}
+.hero h1 em{font-style:normal; color:var(--orange-2); position:relative}
+.hero .sub{margin-top:22px; font-size:clamp(16px,2vw,19px); color:#c4cdd7; max-width:560px}
+.hero .ctas{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap}
+.chips{display:flex; gap:10px; margin-top:30px; flex-wrap:wrap}
+.chip{display:flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:2px; padding:10px 14px; font-size:13px; color:#d6dde6; background:rgba(255,255,255,.03)}
+.chip b{font-family:'JetBrains Mono',monospace; color:var(--orange-2); font-weight:700; font-size:15px}
+.hero-card{position:relative; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:#000; box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.hero-card canvas{width:100%; height:420px}
+@media(max-width:920px){.hero-card canvas{height:300px}}
+.hero-card .tag{position:absolute; left:14px; bottom:14px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; background:rgba(6,18,31,.78); border:1px solid var(--line); padding:7px 11px; border-radius:2px}
+.hero-card .gloss{position:absolute; top:0; bottom:0; width:34%; left:-40%; transform:skewX(-16deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent); animation:sweep 6.5s linear infinite}
+@keyframes sweep{from{left:-45%}to{left:130%}}
+
+/* river band signature under hero */
+.riverband{position:relative; margin-top:64px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#06121f}
+.riverband canvas{width:100%; height:120px}
+.riverband .gloss{position:absolute; top:0; bottom:0; width:22%; left:-30%; transform:skewX(-16deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent); animation:sweep 7s linear infinite}
+
+/* marquee */
+.marquee{background:var(--orange); color:#1c0d05; overflow:hidden; white-space:nowrap; border-bottom:3px solid #06121f}
+.marquee .track{display:inline-block; padding:11px 0; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:.16em; text-transform:uppercase; animation:scroll 28s linear infinite}
+.marquee .track span{padding:0 26px}
+.marquee .track .dot{color:#fff}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:90px 0}
+.sec-paper{background:var(--paper); color:var(--ink)}
+.sec-paper .eyebrow{color:var(--orange)}
+.sechead{max-width:760px; margin-bottom:46px}
+.sechead .eyebrow{display:block; margin-bottom:14px}
+.sechead p{margin-top:16px; color:#54606e; font-size:17px}
+.sec-paper .sechead p{color:#54606e}
+
+/* services */
+.svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--white); border:1px solid var(--line-dark); border-radius:4px; overflow:hidden; transition:transform .18s ease, box-shadow .18s ease; cursor:default}
+.svc:hover{transform:translateY(-5px); box-shadow:0 26px 50px -28px rgba(11,26,43,.5)}
+.svc .thumb{height:148px; position:relative}
+.svc .thumb canvas{width:100%; height:100%}
+.svc .thumb .gloss{position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 0%,rgba(255,255,255,.28),transparent 55%);pointer-events:none}
+.svc .body{padding:20px 20px 24px}
+.svc .num{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--orange); letter-spacing:.1em}
+.svc h3{margin:8px 0 8px; color:var(--ink)}
+.svc p{color:#5a6573; font-size:14.5px}
+
+/* stats */
+.stats{background:var(--navy-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; padding:54px 24px}
+@media(max-width:760px){.stats .wrap{grid-template-columns:repeat(2,1fr); gap:34px 18px}}
+.stat .n{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(34px,5vw,52px); color:#fff; letter-spacing:-.02em}
+.stat .n em{font-style:normal; color:var(--orange-2)}
+.stat .l{margin-top:6px; font-size:13.5px; color:#a9b4c0}
+
+/* process */
+.steps{display:grid; grid-template-columns:repeat(5,1fr); gap:0; border:1px solid var(--line-dark); border-radius:4px; overflow:hidden; background:#fff}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{padding:26px 22px; border-right:1px solid var(--line-dark); position:relative}
+.step:last-child{border-right:none}
+@media(max-width:900px){.step{border-bottom:1px solid var(--line-dark)}}
+.step .k{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; color:var(--orange)}
+.step h3{font-size:18px; margin:14px 0 8px; color:var(--ink)}
+.step p{font-size:13.5px; color:#5a6573}
+.step .bar{position:absolute; left:0; top:0; height:3px; width:100%; background:var(--orange); opacity:.85}
+
+/* gallery */
+.gal{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+@media(max-width:900px){.gal{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.gal{grid-template-columns:1fr}}
+.ba{border:1px solid var(--line); border-radius:4px; overflow:hidden; background:#06121f}
+.ba .panes{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line)}
+.ba .pane{position:relative; height:160px}
+.ba .pane canvas{width:100%;height:100%}
+.ba .pane .lbl{position:absolute; top:8px; left:8px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; background:rgba(6,18,31,.82); border:1px solid var(--line); padding:4px 8px; border-radius:2px}
+.ba .pane.before .slab{position:absolute; inset:0}
+.ba .cap{padding:14px 16px; font-size:14px; color:#c4cdd7}
+.ba .cap b{color:#fff}
+
+/* visualizer */
+.viz{background:var(--navy-2); border:1px solid var(--line); border-radius:6px; overflow:hidden;
+  display:grid; grid-template-columns:1fr 360px}
+@media(max-width:880px){.viz{grid-template-columns:1fr}}
+.viz .stage{position:relative; background:#000; min-height:440px}
+.viz .stage canvas{width:100%; height:100%; position:absolute; inset:0}
+.viz .stage .gloss{position:absolute;inset:0;background:radial-gradient(120% 70% at 35% 0%,rgba(255,255,255,.22),transparent 55%);pointer-events:none}
+.viz .stage .name{position:absolute; left:16px; bottom:16px; font-family:'JetBrains Mono',monospace; letter-spacing:.18em; text-transform:uppercase; font-size:12px; background:rgba(6,18,31,.8); border:1px solid var(--line); padding:8px 12px; border-radius:2px}
+.viz .panel{padding:24px; border-left:1px solid var(--line)}
+@media(max-width:880px){.viz .panel{border-left:none; border-top:1px solid var(--line)}}
+.viz .panel h4{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--steel); margin:0 0 12px; font-weight:500}
+.preset-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px}
+.preset{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:9px 12px; border:1px solid var(--line); border-radius:2px; background:rgba(255,255,255,.03); color:#cfd8e2; cursor:pointer; transition:.15s}
+.preset:hover{border-color:rgba(255,255,255,.45)}
+.preset.active{background:var(--orange); border-color:var(--orange); color:#1c0d05}
+.swatch-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px}
+.sw{width:44px; height:44px; border-radius:50%; border:2px solid rgba(255,255,255,.25); cursor:pointer; position:relative; transition:transform .12s}
+.sw:hover{transform:scale(1.08)}
+.sw.off{opacity:.28; filter:grayscale(.6)}
+.sw.on::after{content:"✓"; position:absolute; inset:0; display:grid; place-items:center; font-size:16px; font-weight:800; color:#0B1A2B; text-shadow:0 0 3px rgba(255,255,255,.6)}
+.viz .hint{font-size:12px; color:var(--steel); margin:14px 0 22px}
+.basebtns{display:flex; gap:8px; margin-bottom:22px}
+.basebtn{flex:1; padding:10px; border:1px solid var(--line); border-radius:2px; cursor:pointer; font-size:12px; text-align:center; color:#cfd8e2; font-family:'JetBrains Mono',monospace; letter-spacing:.06em}
+.basebtn.active{border-color:#fff}
+
+/* estimator */
+.est{background:var(--white); color:var(--ink); border-radius:6px; border:1px solid var(--line-dark); overflow:hidden;
+  display:grid; grid-template-columns:1fr 380px; box-shadow:0 40px 80px -40px rgba(0,0,0,.5)}
+@media(max-width:900px){.est{grid-template-columns:1fr}}
+.est .form{padding:34px}
+.est .q{margin-bottom:30px}
+.est .q .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; color:var(--orange); text-transform:uppercase}
+.est .q h3{margin:8px 0 14px; color:var(--ink); font-size:19px}
+.est input[type=number],.est input[type=text],.est input[type=email],.est input[type=tel]{
+  width:100%; padding:14px 14px; border:1.5px solid var(--line-dark); border-radius:3px; font-size:16px; font-family:'Archivo',sans-serif; color:var(--ink); background:#fbfbf9}
+.est input:focus{outline:none; border-color:var(--orange)}
+.opts{display:flex; gap:10px; flex-wrap:wrap}
+.opt{flex:1; min-width:120px; border:1.5px solid var(--line-dark); border-radius:3px; padding:14px; cursor:pointer; transition:.15s; background:#fbfbf9}
+.opt:hover{border-color:var(--steel)}
+.opt.sel{border-color:var(--orange); background:#fff5f0}
+.opt .t{font-weight:700; font-size:15px}
+.opt .d{font-size:12.5px; color:#6b7682; margin-top:3px}
+.fieldgrid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+@media(max-width:520px){.fieldgrid{grid-template-columns:1fr}}
+.est label{display:block; font-size:12px; font-family:'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#6b7682; margin:0 0 6px}
+.est .quote{background:var(--navy); color:#fff; padding:34px; display:flex; flex-direction:column}
+.est .quote .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--steel)}
+.est .quote .rate{font-family:'JetBrains Mono',monospace; font-size:14px; color:#c4cdd7; margin-top:18px}
+.est .quote .big{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(34px,5vw,46px); margin:6px 0 2px; letter-spacing:-.02em}
+.est .quote .big em{color:var(--orange-2); font-style:normal}
+.est .quote .note{font-size:12.5px; color:#9aa6b3; margin-top:auto; padding-top:22px; border-top:1px solid var(--line)}
+.est .quote .breakdown{margin-top:20px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#aeb9c6; line-height:2}
+.est .quote .breakdown span{float:right; color:#fff}
+.success{padding:40px 34px; text-align:center}
+.success .ic{width:64px;height:64px;border-radius:50%;background:#eafaef;color:#1a8f48;display:grid;place-items:center;margin:0 auto 18px;font-size:30px}
+
+/* about */
+.about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{color:#c4cdd7; margin-top:16px; font-size:16px}
+.towns{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+.town{font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.04em; border:1px solid var(--line); padding:8px 12px; border-radius:2px; color:#d6dde6}
+.about-card{border:1px solid var(--line); border-radius:5px; overflow:hidden; background:#06121f}
+.about-card canvas{width:100%; height:340px}
+
+/* contact */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.cbox{background:var(--white); color:var(--ink); border-radius:6px; padding:30px; border:1px solid var(--line-dark)}
+.cbox h3{color:var(--ink)}
+.cbox .row{display:flex; gap:12px; align-items:center; margin-top:18px; padding:14px; border:1px solid var(--line-dark); border-radius:3px}
+.cbox .row .ic{width:40px;height:40px;border-radius:3px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none}
+.cbox .row .l{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6b7682}
+.cbox .row .v{font-weight:700; font-size:15px}
+.calbox{background:#06121f;border:1px solid var(--line);border-radius:6px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+.calbox h3{color:#fff}
+.calbox p{color:#c4cdd7;margin-top:12px;font-size:15px}
+
+/* footer */
+footer{background:#06121f; border-top:1px solid var(--line); padding:56px 0 30px}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:30px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr; gap:24px}}
+footer h5{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--steel); margin:0 0 16px; font-weight:500}
+footer a{display:block; color:#c4cdd7; font-size:14px; padding:4px 0}
+footer a:hover{color:#fff}
+.footbottom{margin-top:40px; padding-top:22px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-size:12.5px; color:var(--steel); font-family:'JetBrains Mono',monospace}
+
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){
+  .gloss,.marquee .track{animation:none !important}
+  .reveal{opacity:1; transform:none; transition:none}
+}
+.note-build{background:#1d0f06;border:1px dashed var(--orange);color:#ffd9c7;font-family:'JetBrains Mono',monospace;font-size:12px;border-radius:3px;padding:10px 14px;margin-top:16px}
+
+/* ---------- brand logo img ---------- */
+.brand img{height:42px;width:auto}
+footer .brand img{height:38px}
+
+/* ---------- estimator wizard ---------- */
+.wiz-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:14px}
+.wiz-steps{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);white-space:nowrap}
+.wiz-prog{flex:1;height:5px;background:var(--paper-2);border-radius:99px;overflow:hidden}
+.wiz-prog i{display:block;height:100%;width:20%;background:var(--orange);border-radius:99px;transition:width .35s ease}
+.wstep{display:none;animation:fade .35s ease}
+.wstep.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.wstep h3{color:var(--ink);font-size:clamp(20px,2.6vw,26px);margin-bottom:6px}
+.wstep .sub{color:#6b7682;font-size:14.5px;margin-bottom:18px}
+.wiz-nav{display:flex;gap:12px;margin-top:26px}
+.wiz-nav .btn{flex:1;justify-content:center}
+.btn-back{background:transparent;color:var(--ink);border:1.5px solid var(--line-dark)}
+.btn-back:hover{border-color:var(--steel)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.areawrap{position:relative}
+.areawrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:13px;color:#9aa6b3;pointer-events:none}
+.opt.big{display:flex;align-items:flex-start;gap:12px}
+.opt.big .ti{font-size:22px;line-height:1}
+
+/* ---------- visualizer upload ---------- */
+.uploadbox{border:1.5px dashed var(--line);border-radius:4px;padding:16px;text-align:center;margin-bottom:16px;background:rgba(255,255,255,.03);cursor:pointer;transition:.15s}
+.uploadbox:hover{border-color:rgba(255,255,255,.5)}
+.uploadbox .big{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#cfd8e2}
+.uploadbox .sm{font-size:11.5px;color:var(--steel);margin-top:6px}
+.viz-actions{display:flex;gap:8px;margin-bottom:18px}
+.viz-actions .mini{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:9px;border:1px solid var(--line);border-radius:2px;color:#cfd8e2;cursor:pointer;background:rgba(255,255,255,.03)}
+.viz-actions .mini:hover{border-color:rgba(255,255,255,.5)}
+.sw{position:relative}
+.sw .tip{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:10px;background:#06121f;border:1px solid var(--line);padding:3px 7px;border-radius:2px;opacity:0;pointer-events:none;transition:.12s;z-index:5;color:#cfd8e2}
+.sw:hover .tip{opacity:1}
+.blend-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;padding:2px 6px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.blend-tag.sig{background:var(--orange);color:#1c0d05}
+.blend-tag.tor{background:#1C49A6;color:#fff}
+.flakecredit{font-size:11px;color:var(--steel);margin-top:14px;line-height:1.5}
+.flakecredit a{color:#9fb6e8;text-decoration:underline}
+
+/* ---------- 10s popup modal ---------- */
+.modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:22px;
+  background:rgba(4,10,18,.66);backdrop-filter:blur(4px);animation:fade .3s ease}
+.modal.open{display:flex}
+.modal-card{position:relative;max-width:440px;width:100%;background:var(--navy-2);border:1px solid var(--line);
+  border-radius:8px;overflow:hidden;box-shadow:0 50px 100px -30px rgba(0,0,0,.8)}
+.modal-card .strip{height:6px;background:linear-gradient(90deg,var(--orange),var(--blue-bright))}
+.modal-card .pad{padding:30px}
+.modal-card .eyebrow{margin-bottom:12px;display:block}
+.modal-card h3{color:#fff;font-size:26px;line-height:1.08}
+.modal-card p{color:#c4cdd7;margin-top:12px;font-size:15px}
+.modal-card .btn{width:100%;justify-content:center;margin-top:20px}
+.modal-card .x{position:absolute;top:12px;right:14px;background:none;border:none;color:#9aa6b3;font-size:24px;cursor:pointer;line-height:1}
+.modal-card .x:hover{color:#fff}
+.modal-card .fine{font-size:12px;color:var(--steel);text-align:center;margin-top:12px}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="wrap">
+  <div class="left">★★★★★ <span class="hideSm">Locally owned · Grand River region</span></div>
+  <div class="right">
+    <a href="tel:+16473130000">📞 (647) 313-0000</a>
+    <a class="hideSm" href="mailto:Info@grandriverbasement.ca">Info@grandriverbasement.ca</a>
+  </div>
+</div></div>
+
+<!-- NAV -->
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Grandriver Coatings home">
+    <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="230" height="60">
+  </a>
+  <div class="navlinks" id="navlinks">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visualizer">Visualizer</a>
+    <a href="#estimate">Estimate</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="navcta">
+    <a href="#estimate" class="btn btn-ghost">Instant estimate</a>
+    <a href="#contact" class="btn btn-orange">Free quote <span class="arr">→</span></a>
+    <button class="menubtn" id="menubtn" aria-label="Menu">☰</button>
+  </div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="blueprint"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">Polyaspartic flake floors · 1-day install</span>
+        <h1 class="reveal">Floors that flow<br>with the <em>Grand&nbsp;River</em>.</h1>
+        <p class="sub reveal">Premium resin flake coatings for garages, basements, patios, pool decks and shop floors — installed in a single day and built to outlast epoxy 4&nbsp;to&nbsp;1. Serving Kitchener–Waterloo, Cambridge, Guelph, Hamilton and beyond.</p>
+        <div class="ctas reveal">
+          <a href="#estimate" class="btn btn-orange">Get instant estimate <span class="arr">→</span></a>
+          <a href="#contact" class="btn btn-ghost">Book free consultation</a>
+        </div>
+        <div class="chips reveal">
+          <div class="chip"><b>1</b> day install</div>
+          <div class="chip"><b>4×</b> stronger than epoxy</div>
+          <div class="chip"><b>15-yr</b> warranty</div>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <canvas id="heroFloor"></canvas>
+        <div class="gloss"></div>
+        <div class="tag">Signature blend · "Grand River"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signature river of flakes -->
+  <div class="riverband">
+    <canvas id="riverCanvas"></canvas>
+    <div class="gloss"></div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="marqueeTrack"></div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec sec-paper" id="services">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">What we coat</span>
+      <h2>One crew. Every concrete floor.</h2>
+      <p>Flake-broadcast polyaspartic systems that seal, protect and transform tired concrete into a showroom-grade surface — indoors and out.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><em>1</em> day</div><div class="l">Most floors done start-to-finish</div></div>
+    <div class="stat reveal"><div class="n">4×</div><div class="l">Stronger &amp; more UV-stable than epoxy</div></div>
+    <div class="stat reveal"><div class="n">15<em>yr</em></div><div class="l">Workmanship &amp; adhesion warranty</div></div>
+    <div class="stat reveal"><div class="n">100<em>%</em></div><div class="l">Local — Grand River region</div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec sec-paper" id="process">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">How it's done</span>
+      <h2>The 5-step coating system</h2>
+      <p>No shortcuts. Proper diamond-grinding and crack repair are why our floors don't peel like a weekend epoxy kit.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="bar"></div><div class="k">STEP 01</div><h3>Diamond grind</h3><p>We mechanically grind the slab to open the concrete for a permanent mechanical bond.</p></div>
+      <div class="step reveal"><div class="k">STEP 02</div><h3>Repair &amp; patch</h3><p>Cracks, pits and spalls are ground out and filled with structural polymer.</p></div>
+      <div class="step reveal"><div class="k">STEP 03</div><h3>Base coat</h3><p>A pigmented polyaspartic base is rolled edge-to-edge as the foundation layer.</p></div>
+      <div class="step reveal"><div class="k">STEP 04</div><h3>Broadcast flakes</h3><p>Vinyl flakes are hand-broadcast to full refusal for a dense, seamless texture.</p></div>
+      <div class="step reveal"><div class="k">STEP 05</div><h3>Polyaspartic topcoat</h3><p>A clear UV-stable topcoat locks it all in — walkable in hours, drivable next day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">Before &amp; after</span>
+      <h2>From cracked slab to showroom floor.</h2>
+      <p>Drag-the-slider style transformations from recent projects across the region.</p>
+    </div>
+    <div class="gal" id="galGrid"></div>
+    <div class="note-build">DESIGN NOTE: these are rendered placeholders. Swap each panel for your real before/after job photos — I'll show you exactly where in the code.</div>
+  </div>
+</section>
+
+<!-- VISUALIZER -->
+<section class="sec sec-paper" id="visualizer">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">Design your floor</span>
+      <h2>Flake colour visualizer</h2>
+      <p>Upload a photo of your own floor and preview real Torginol® flake blends on it — or start from a signature blend and build your own. Then send your blend with your quote.</p>
+    </div>
+    <div class="viz reveal">
+      <div class="stage">
+        <canvas id="vizCanvas"></canvas>
+        <div class="gloss"></div>
+        <div class="name" id="vizName">GRAND RIVER</div>
+      </div>
+      <div class="panel">
+        <h4>Your floor</h4>
+        <label class="uploadbox" for="vizUpload" id="uploadBox">
+          <div class="big">⤴ Upload a floor photo</div>
+          <div class="sm">See your real concrete coated in your chosen flakes</div>
+          <input type="file" id="vizUpload" accept="image/*" hidden>
+        </label>
+        <div class="viz-actions">
+          <div class="mini" id="resetSample">Use sample floor</div>
+          <a class="mini" href="https://torginol.com/design" target="_blank" rel="noopener">Torginol visualizer ↗</a>
+        </div>
+        <h4>Signature &amp; Torginol blends</h4>
+        <div class="preset-row" id="presetRow"></div>
+        <h4>Base coat</h4>
+        <div class="basebtns" id="baseBtns"></div>
+        <h4>Flake colours</h4>
+        <div class="swatch-row" id="swatchRow"></div>
+        <p class="hint">Tap a flake colour to add or remove it from the blend. Hover a chip for its Torginol name &amp; code.</p>
+        <a href="#estimate" class="btn btn-dark" style="width:100%; justify-content:center">Use this blend in my quote →</a>
+        <p class="flakecredit">Flake colours reference the <a href="https://torginol.com/resources/color-palettes/flake-color-palette" target="_blank" rel="noopener">Torginol® Polymer ColorFlakes™</a> catalog (300+ blends). On-screen colours are approximate — ask us for physical samples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section class="sec" id="estimate">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">Instant estimate</span>
+      <h2>Get your price in 30 seconds.</h2>
+      <p>Answer three quick questions for a real ballpark — no waiting on a callback. We confirm the final number after a free on-site measure.</p>
+    </div>
+    <div class="est reveal" id="estCard">
+      <div class="form" id="estForm">
+        <div class="wiz-top">
+          <span class="wiz-steps" id="wizSteps">Step 1 of 4</span>
+          <div class="wiz-prog"><i id="wizBar"></i></div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="wstep active" data-step="1">
+          <div class="k" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);text-transform:uppercase">Question 01</div>
+          <h3>How big is the concrete area?</h3>
+          <p class="sub">Total floor area you want coated, in square feet. A single garage is roughly 240–400 sq ft.</p>
+          <div class="areawrap">
+            <input type="number" id="area" placeholder="e.g. 480" min="1" inputmode="numeric">
+            <span class="unit">sq ft</span>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="wstep" data-step="2">
+          <div class="k" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);text-transform:uppercase">Question 02</div>
+          <h3>What shape is the concrete in?</h3>
+          <p class="sub">Cracks, pits and spalling need extra prep before coating — this affects your price.</p>
+          <div class="opts" id="crackOpts" style="flex-direction:column">
+            <div class="opt big" data-v="none"><div class="ti">✓</div><div><div class="t">Solid</div><div class="d">No real cracks or chips — clean, sound slab</div></div></div>
+            <div class="opt big" data-v="some"><div class="ti">◔</div><div><div class="t">Some wear</div><div class="d">Minor cracks or a few chips and pits</div></div></div>
+            <div class="opt big" data-v="heavy"><div class="ti">⚠</div><div><div class="t">Rough</div><div class="d">Heavy cracking, pitting or spalling</div></div></div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="wstep" data-step="3">
+          <div class="k" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);text-transform:uppercase">Question 03</div>
+          <h3>Any water or moisture issues?</h3>
+          <p class="sub">Damp slabs need a moisture-mitigation primer so the coating bonds for good.</p>
+          <div class="opts" id="moistOpts" style="flex-direction:column">
+            <div class="opt big" data-v="no"><div class="ti">☀</div><div><div class="t">Dry</div><div class="d">Stays dry — no damp spots or seepage</div></div></div>
+            <div class="opt big" data-v="yes"><div class="ti">💧</div><div><div class="t">Damp / wet</div><div class="d">Moisture, efflorescence or seepage</div></div></div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="wstep" data-step="4">
+          <div class="k" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);text-transform:uppercase">Almost done</div>
+          <h3>Where do we send the estimate?</h3>
+          <p class="sub">We'll email your quote and reach out to book a free on-site measure.</p>
+          <div class="fieldgrid">
+            <div><label>Name</label><input type="text" id="cName" placeholder="Full name"></div>
+            <div><label>Phone</label><input type="tel" id="cPhone" placeholder="(519) 000-0000"></div>
+          </div>
+          <div style="margin-top:12px"><label>Email</label><input type="email" id="cEmail" placeholder="you@email.com"></div>
+          <div style="margin-top:12px"><label>Project address</label><input type="text" id="cAddr" placeholder="Street, City"></div>
+        </div>
+
+        <div class="wiz-nav">
+          <button class="btn btn-back" id="backBtn" disabled>← Back</button>
+          <button class="btn btn-orange" id="nextBtn">Next →</button>
+          <button class="btn btn-orange" id="submitBtn" style="display:none">Email me my estimate →</button>
+        </div>
+        <div class="note-build">DEMO: in the live Vercel + Supabase version this saves the lead to your database and emails you + the customer automatically. Here it just shows the result.</div>
+      </div>
+      <div class="quote" id="quoteBox">
+        <div class="k">Live estimate</div>
+        <div class="rate" id="rateLine">Enter your details to see pricing</div>
+        <div class="big" id="totalLine"><em>$—</em></div>
+        <div class="breakdown" id="breakdown"></div>
+        <div class="note">Final price confirmed after a free on-site measure. Estimate assumes standard polyaspartic flake system.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about" style="background:var(--navy-2); border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Who we are</span>
+        <h2 style="margin-top:14px">Built local, like the river<br>we're named for.</h2>
+        <p>Grandriver Coatings is a local, owner-operated crew specializing in one thing: flake floor coatings done the right way. We grind, we repair, we broadcast to refusal — and we stand behind every floor.</p>
+        <p>From a single garage in Elmira to a warehouse in Hamilton, we bring the same showroom standard and a 15-year workmanship warranty to every slab in the Grand River region.</p>
+        <div class="towns" id="townChips"></div>
+      </div>
+      <div class="about-card reveal">
+        <canvas id="aboutFloor"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">Let's talk</span>
+      <h2>Book your free consultation.</h2>
+      <p>Pick a time that works and we'll come measure, talk colours and give you a firm quote — no pressure.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox reveal">
+        <h3>Reach us directly</h3>
+        <div class="row"><div class="ic">📞</div><div><div class="l">Call or text</div><div class="v">(647) 313-0000</div></div></div>
+        <div class="row"><div class="ic">✉</div><div><div class="l">Email</div><div class="v">Info@grandriverbasement.ca</div></div></div>
+        <div class="row"><div class="ic">📍</div><div><div class="l">Service area</div><div class="v">Kitchener · Waterloo · Cambridge · Guelph · Hamilton + more</div></div></div>
+      </div>
+      <div class="calbox reveal">
+        <h3>Schedule online</h3>
+        <p>Use our live calendar to grab a free on-site consultation. (Connects to your Cal.com — same as the basements site.)</p>
+        <a href="#" id="calBtn" class="btn btn-orange" style="margin-top:22px; justify-content:center">Open booking calendar →</a>
+        <div class="note-build">Replace the link with your Cal.com handle, e.g. cal.com/grandriver/consultation — I'll wire the inline embed in the live build.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:14px;display:inline-block">
+          <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="210" height="55">
+        </a>
+        <p style="color:#9aa6b3; font-size:14px; max-width:320px">Premium polyaspartic flake floor coatings for the Grand River region. Garages, basements, patios, pool decks and commercial floors.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <a href="#services">Garage floors</a>
+        <a href="#services">Basement floors</a>
+        <a href="#services">Patios &amp; walkways</a>
+        <a href="#services">Pool decks</a>
+        <a href="#services">Commercial</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="#process">Our process</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visualizer">Visualizer</a>
+        <a href="#estimate">Free estimate</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footbottom">
+      <div>© <span id="yr"></span> Grandriver Coatings</div>
+      <div>Kitchener · Waterloo · Cambridge · Paris · Brantford · Milton · London · Guelph · Elmira · Hamilton</div>
+    </div>
+  </div>
+</footer>
+
+<!-- 10-SECOND FREE-ESTIMATE POPUP -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <div class="strip"></div>
+    <button class="x" id="modalClose" aria-label="Close">×</button>
+    <div class="pad">
+      <span class="eyebrow">Limited spring booking</span>
+      <h3 id="modalTitle">Get your free floor estimate.</h3>
+      <p>Answer 3 quick questions and get an instant ballpark price for your garage, basement or shop floor — plus a free on-site measure. No pressure, no spam.</p>
+      <a href="#estimate" class="btn btn-orange" id="modalCta">Get my instant estimate →</a>
+      <div class="fine">Takes about 30 seconds.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= palette ================= */
+const C = {
+  navy:'#0B1A2B', white:'#FFFFFF', blue:'#1C49A6', blueBright:'#2E63D6',
+  orange:'#ED5A24', gray:'#C7CDD4', black:'#10202F', tan:'#7c7264', steelBase:'#5b6470'
+};
+
+/* ================= hi-dpi canvas helper ================= */
+function fit(cv){
+  const r = cv.getBoundingClientRect();
+  const dpr = Math.min(window.devicePixelRatio||1, 2);
+  cv.width = Math.max(2, Math.round(r.width*dpr));
+  cv.height = Math.max(2, Math.round(r.height*dpr));
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  return {ctx, w:r.width, h:r.height};
+}
+
+/* draw one irregular flake */
+function flake(ctx,x,y,rad,col){
+  const n = 4+((Math.random()*3)|0);
+  const a0 = Math.random()*Math.PI*2;
+  ctx.beginPath();
+  for(let k=0;k<n;k++){
+    const a=a0+(Math.PI*2*k/n)+(Math.random()-.5)*0.7;
+    const rr=rad*(0.55+Math.random()*0.45);
+    const px=x+Math.cos(a)*rr, py=y+Math.sin(a)*rr;
+    k?ctx.lineTo(px,py):ctx.moveTo(px,py);
+  }
+  ctx.closePath(); ctx.fillStyle=col; ctx.fill();
+}
+
+/* fill a rectangular floor with flakes on a base */
+function paintFloor(cv, base, cols, opts={}){
+  const {ctx,w,h}=fit(cv);
+  ctx.clearRect(0,0,w,h);
+  ctx.fillStyle=base; ctx.fillRect(0,0,w,h);
+  const dens = opts.dens||0.012;
+  const area=w*h, count=Math.round(area*dens);
+  for(let i=0;i<count;i++){
+    const x=Math.random()*w, y=Math.random()*h;
+    const rad=(opts.min||4)+Math.random()*((opts.max||9)-(opts.min||4));
+    flake(ctx,x,y,rad,cols[(Math.random()*cols.length)|0]);
+  }
+  // subtle gloss
+  const g=ctx.createRadialGradient(w*0.32,-h*0.2,10,w*0.32,-h*0.2,h*1.4);
+  g.addColorStop(0,'rgba(255,255,255,.18)'); g.addColorStop(.5,'rgba(255,255,255,.04)'); g.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+}
+
+/* flowing river band */
+function paintRiver(cv, cols){
+  const {ctx,w,h}=fit(cv);
+  ctx.clearRect(0,0,w,h);
+  ctx.save();
+  ctx.beginPath();
+  const midTop=h*0.30, midBot=h*0.78, amp=h*0.13;
+  ctx.moveTo(0,midTop);
+  for(let x=0;x<=w;x+=14) ctx.lineTo(x, midTop+Math.sin(x/180)*amp*0.5+Math.sin(x/70)*5);
+  for(let x=w;x>=0;x-=14) ctx.lineTo(x, midBot+Math.sin(x/200+1)*amp*0.5);
+  ctx.closePath(); ctx.clip();
+  ctx.fillStyle=C.navy; ctx.fillRect(0,0,w,h);
+  const count=Math.round(w*h*0.02);
+  for(let i=0;i<count;i++){
+    flake(ctx,Math.random()*w,Math.random()*h,3+Math.random()*7,cols[(Math.random()*cols.length)|0]);
+  }
+  ctx.restore();
+}
+
+/* ============= Torginol flake catalog (real chips) ============= */
+/* Names + codes from the Torginol Polymer ColorFlakes palette; on-screen hex is approximate.
+   "River Blue" / "Safety Orange" are custom-order brand accents. */
+const CHIPS = [
+  {name:'White',           code:'F1820',  hex:'#F2F2EE'},
+  {name:'Dove Gray',       code:'F1160',  hex:'#B9BBB6'},
+  {name:'Battleship Gray', code:'F9955',  hex:'#8A8E8C'},
+  {name:'Graphite',        code:'F1415',  hex:'#5A5E61'},
+  {name:'Charcoal',        code:'F1090',  hex:'#3C3F42'},
+  {name:'Ebony',           code:'F5114',  hex:'#26282A'},
+  {name:'Cement',          code:'F5252',  hex:'#9A968C'},
+  {name:'Tan',             code:'F1785',  hex:'#C8B79B'},
+  {name:'Caramel',         code:'F9954',  hex:'#B07A41'},
+  {name:'Chocolate',       code:'F5052',  hex:'#5A4632'},
+  {name:'Patio Red',       code:'F1640',  hex:'#B5482B'},
+  {name:'Canyon Red',      code:'F1080',  hex:'#8C3322'},
+  {name:'River Blue',      code:'CUSTOM', hex:'#1C49A6'},
+  {name:'Safety Orange',   code:'CUSTOM', hex:'#ED5A24'}
+];
+
+/* ============= blends (signature + Torginol-catalog) ============= */
+const blends = {
+  'GRAND RIVER':{base:'#0B1A2B', flakes:['#F2F2EE','#1C49A6','#ED5A24','#C7CDD4'], kind:'sig'},
+  'EMBER':      {base:'#1a1410', flakes:['#ED5A24','#26282A','#F2F2EE','#8A8E8C'], kind:'sig'},
+  'GLACIER':    {base:'#2a3340', flakes:['#F2F2EE','#B9BBB6','#1C49A6'],           kind:'sig'},
+  'DORY':       {base:'#0B1A2B', flakes:['#1C49A6','#F2F2EE','#C7CDD4','#26282A'], kind:'sig'},
+  'SMOKEHOUSE': {base:'#1a1d22', flakes:['#26282A','#8A8E8C','#F2F2EE'],           kind:'sig'},
+  'DOMINO':     {base:'#15171a', flakes:['#F2F2EE','#3C3F42','#8A8E8C'],           kind:'tor'},
+  'STONEHENGE': {base:'#2a2c2e', flakes:['#B9BBB6','#8A8E8C','#5A5E61','#F2F2EE'], kind:'tor'},
+  'SADDLEBROOK':{base:'#241c14', flakes:['#C8B79B','#B07A41','#5A4632','#F2F2EE'], kind:'tor'},
+  'TERRACOTTA': {base:'#1d120e', flakes:['#B5482B','#8C3322','#C8B79B','#3C3F42'], kind:'tor'}
+};
+
+/* ============= service cards ============= */
+const services=[
+  {n:'01',t:'Garage Floors',d:'The flagship. A flaked polyaspartic garage floor that shrugs off hot tires, road salt and oil — and looks incredible.',blend:'GRAND RIVER'},
+  {n:'02',t:'Basement Floors',d:'Warm, sealed, easy-clean basement floors that handle moisture far better than paint or tile.',blend:'GLACIER'},
+  {n:'03',t:'Patios & Walkways',d:'Slip-resistant, UV-stable coatings that turn dull exterior concrete into a finished outdoor surface.',blend:'EMBER'},
+  {n:'04',t:'Pool Decks',d:'Cool-to-touch, textured, chlorine-tough finishes engineered for wet bare feet.',blend:'DORY'},
+  {n:'05',t:'Commercial & Shop',d:'Showrooms, warehouses and workshops — fast-cure systems that get you back to business overnight.',blend:'SMOKEHOUSE'}
+];
+const svcGrid=document.getElementById('svcGrid');
+services.forEach(s=>{
+  const el=document.createElement('div'); el.className='svc reveal';
+  el.innerHTML=`<div class="thumb"><canvas></canvas><div class="gloss"></div></div>
+    <div class="body"><div class="num">${s.n} / SERVICE</div><h3>${s.t}</h3><p>${s.d}</p></div>`;
+  svcGrid.appendChild(el);
+  const b=blends[s.blend]; requestAnimationFrame(()=>paintFloor(el.querySelector('canvas'),b.base,b.flakes,{dens:0.02,min:3,max:7}));
+});
+
+/* ============= gallery ============= */
+const gallery=[
+  {city:'Kitchener garage', blend:'GRAND RIVER'},
+  {city:'Guelph basement', blend:'GLACIER'},
+  {city:'Hamilton shop floor', blend:'SMOKEHOUSE'}
+];
+const galGrid=document.getElementById('galGrid');
+gallery.forEach(g=>{
+  const el=document.createElement('div'); el.className='ba reveal';
+  el.innerHTML=`<div class="panes">
+      <div class="pane before"><canvas></canvas><div class="lbl">Before</div></div>
+      <div class="pane after"><canvas></canvas><div class="lbl">After</div></div>
+    </div><div class="cap"><b>${g.city}</b> — coated in one day</div>`;
+  galGrid.appendChild(el);
+  const cvs=el.querySelectorAll('canvas');
+  requestAnimationFrame(()=>{
+    // before = dull cracked slab
+    const {ctx,w,h}=fit(cvs[0]); ctx.fillStyle='#9a9b96'; ctx.fillRect(0,0,w,h);
+    for(let i=0;i<w*h*0.004;i++){flake(ctx,Math.random()*w,Math.random()*h,1+Math.random()*2,Math.random()<.5?'#86877f':'#aeafa9');}
+    ctx.strokeStyle='rgba(40,40,40,.5)'; ctx.lineWidth=1.4;
+    for(let c=0;c<5;c++){ctx.beginPath();let x=Math.random()*w,y=Math.random()*h;ctx.moveTo(x,y);for(let s=0;s<6;s++){x+=(Math.random()-.5)*60;y+=(Math.random()-.5)*60;ctx.lineTo(x,y);}ctx.stroke();}
+    const b=blends[g.blend]; paintFloor(cvs[1],b.base,b.flakes,{dens:0.02,min:3,max:7});
+  });
+});
+
+/* ============= hero + river + about ============= */
+function renderHero(){ paintFloor(document.getElementById('heroFloor'),blends['GRAND RIVER'].base,blends['GRAND RIVER'].flakes,{dens:0.018,min:4,max:10}); }
+function renderRiver(){ paintRiver(document.getElementById('riverCanvas'),[C.white,C.blue,C.orange,C.gray]); }
+function renderAbout(){ paintFloor(document.getElementById('aboutFloor'),blends['DORY'].base,blends['DORY'].flakes,{dens:0.02,min:4,max:9}); }
+
+/* ============= visualizer ============= */
+let vizBase='#0B1A2B';
+let vizImg=null;                       // uploaded client floor photo (Image) or null
+let vizFlakes={};
+CHIPS.forEach(c=>vizFlakes[c.hex]=false);
+blends['GRAND RIVER'].flakes.forEach(h=>vizFlakes[h]=true);
+const baseDefs=[['Navy','#0B1A2B'],['Slate','#2a3340'],['Charcoal','#1a1d22'],['Concrete','#9a968c']];
+
+function activeFlakes(){
+  const cols=CHIPS.filter(c=>vizFlakes[c.hex]).map(c=>c.hex);
+  return cols.length?cols:['#C7CDD4'];
+}
+function renderViz(){
+  const cv=document.getElementById('vizCanvas');
+  const use=activeFlakes();
+  if(vizImg){
+    const {ctx,w,h}=fit(cv);
+    ctx.clearRect(0,0,w,h);
+    // cover-draw the uploaded photo
+    const ir=vizImg.width/vizImg.height, cr=w/h;
+    let dw,dh; if(ir>cr){dh=h; dw=h*ir;} else {dw=w; dh=w/ir;}
+    ctx.drawImage(vizImg,(w-dw)/2,(h-dh)/2,dw,dh);
+    // tint toward base coat so it reads as a fresh coating
+    ctx.fillStyle=vizBase; ctx.globalAlpha=.32; ctx.fillRect(0,0,w,h); ctx.globalAlpha=1;
+    // broadcast flakes over the photo
+    const count=Math.round(w*h*0.018);
+    for(let i=0;i<count;i++){flake(ctx,Math.random()*w,Math.random()*h,3+Math.random()*5,use[(Math.random()*use.length)|0]);}
+    const g=ctx.createRadialGradient(w*0.32,-h*0.2,10,w*0.32,-h*0.2,h*1.4);
+    g.addColorStop(0,'rgba(255,255,255,.20)'); g.addColorStop(.5,'rgba(255,255,255,.05)'); g.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+  } else {
+    paintFloor(cv,vizBase,use,{dens:0.02,min:4,max:9});
+  }
+}
+function clearPreset(){document.querySelectorAll('.preset').forEach(p=>p.classList.remove('active'));}
+
+/* flake swatches (real Torginol chips, with hover name+code) */
+const swatchRow=document.getElementById('swatchRow');
+CHIPS.forEach(c=>{
+  const d=document.createElement('div'); d.className='sw '+(vizFlakes[c.hex]?'on':'off');
+  d.style.background=c.hex;
+  d.innerHTML=`<span class="tip">${c.name} · ${c.code}</span>`;
+  d.onclick=()=>{
+    vizFlakes[c.hex]=!vizFlakes[c.hex];
+    d.className='sw '+(vizFlakes[c.hex]?'on':'off');
+    clearPreset();
+    document.getElementById('vizName').textContent = vizImg?'YOUR FLOOR · CUSTOM':'CUSTOM';
+    renderViz();
+  };
+  swatchRow.appendChild(d);
+});
+
+/* base coat buttons */
+const baseBtns=document.getElementById('baseBtns');
+baseDefs.forEach(([name,hex])=>{
+  const b=document.createElement('div'); b.className='basebtn'+(hex===vizBase?' active':''); b.textContent=name; b.dataset.hex=hex;
+  b.onclick=()=>{vizBase=hex; document.querySelectorAll('.basebtn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); renderViz();};
+  baseBtns.appendChild(b);
+});
+
+/* preset blends with SIGNATURE / TORGINOL badges */
+const presetRow=document.getElementById('presetRow');
+Object.keys(blends).forEach((name,i)=>{
+  const bl=blends[name];
+  const p=document.createElement('div'); p.className='preset'+(i===0?' active':'');
+  p.innerHTML=`${name}<span class="blend-tag ${bl.kind}">${bl.kind==='sig'?'SIGNATURE':'TORGINOL'}</span>`;
+  p.onclick=()=>{
+    clearPreset(); p.classList.add('active');
+    vizBase=bl.base;
+    CHIPS.forEach(c=>vizFlakes[c.hex]=bl.flakes.includes(c.hex));
+    document.querySelectorAll('#swatchRow .sw').forEach((sw,idx)=>{sw.className='sw '+(vizFlakes[CHIPS[idx].hex]?'on':'off');});
+    document.querySelectorAll('.basebtn').forEach(x=>x.classList.toggle('active', x.dataset.hex===bl.base));
+    document.getElementById('vizName').textContent = vizImg? name+' · YOUR FLOOR' : name;
+    renderViz();
+  };
+  presetRow.appendChild(p);
+});
+
+/* photo upload → preview flakes on the client's own floor */
+document.getElementById('vizUpload').addEventListener('change',e=>{
+  const f=e.target.files&&e.target.files[0]; if(!f) return;
+  const img=new Image();
+  img.onload=()=>{vizImg=img; document.getElementById('vizName').textContent='YOUR FLOOR'; document.getElementById('uploadBox').querySelector('.big').textContent='✓ Photo loaded — tap flakes'; renderViz();};
+  img.src=URL.createObjectURL(f);
+});
+document.getElementById('resetSample').onclick=()=>{
+  vizImg=null;
+  document.getElementById('uploadBox').querySelector('.big').textContent='⤴ Upload a floor photo';
+  document.getElementById('vizName').textContent='GRAND RIVER';
+  renderViz();
+};
+
+/* ============= estimator wizard (one question at a time) ============= */
+let est={area:0,crack:null,moist:null};
+let step=1; const TOTAL=4;
+const wsteps=[...document.querySelectorAll('#estForm .wstep')];
+const backBtn=document.getElementById('backBtn');
+const nextBtn=document.getElementById('nextBtn');
+const submitBtn=document.getElementById('submitBtn');
+
+function showStep(n){
+  step=Math.max(1,Math.min(TOTAL,n));
+  wsteps.forEach(s=>s.classList.toggle('active', +s.dataset.step===step));
+  document.getElementById('wizSteps').textContent=`Step ${step} of ${TOTAL}`;
+  document.getElementById('wizBar').style.width=(step/TOTAL*100)+'%';
+  backBtn.disabled = step===1;
+  const last = step===TOTAL;
+  nextBtn.style.display = last?'none':'';
+  submitBtn.style.display = last?'':'none';
+  calc();
+}
+function canAdvance(){
+  if(step===1) return est.area>0;
+  if(step===2) return !!est.crack;
+  if(step===3) return !!est.moist;
+  return true;
+}
+nextBtn.onclick=()=>{
+  if(!canAdvance()){ alert(step===1?'Please enter the concrete area.':'Please choose an option.'); return; }
+  showStep(step+1);
+};
+backBtn.onclick=()=>showStep(step-1);
+
+function setOpts(id,key,fromStep){
+  document.querySelectorAll('#'+id+' .opt').forEach(o=>{
+    o.onclick=()=>{
+      document.querySelectorAll('#'+id+' .opt').forEach(x=>x.classList.remove('sel'));
+      o.classList.add('sel'); est[key]=o.dataset.v; calc();
+      setTimeout(()=>{ if(step===fromStep) showStep(step+1); },240); // auto-advance
+    };
+  });
+}
+setOpts('crackOpts','crack',2); setOpts('moistOpts','moist',3);
+document.getElementById('area').addEventListener('input',e=>{est.area=parseFloat(e.target.value)||0; calc();});
+document.getElementById('area').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(); nextBtn.click();}});
+function calc(){
+  const rateLine=document.getElementById('rateLine'), totalLine=document.getElementById('totalLine'), bd=document.getElementById('breakdown');
+  if(!est.area){rateLine.textContent='Enter area to see pricing'; totalLine.innerHTML='<em>$—</em>'; bd.innerHTML=''; return;}
+  let rate=8; const adds=[];
+  if(est.crack==='some'||est.crack==='heavy'){rate+=1; adds.push(['Crack &amp; damage prep','+$1.00']);}
+  if(est.moist==='yes'){rate+=1; adds.push(['Moisture mitigation','+$1.00']);}
+  const lowRate=rate, highRate=Math.min(10,rate+1);
+  const low=Math.round(est.area*lowRate), high=Math.round(est.area*highRate);
+  rateLine.textContent=`${est.area.toLocaleString()} sq ft · $${lowRate.toFixed(2)}–$${highRate.toFixed(2)} / sq ft`;
+  totalLine.innerHTML=`<em>$${low.toLocaleString()}</em> – $${high.toLocaleString()}`;
+  bd.innerHTML=`Base system <span>$8.00</span>`+adds.map(a=>`${a[0]} <span>${a[1]}</span>`).join('');
+}
+document.getElementById('submitBtn').addEventListener('click',()=>{
+  const name=document.getElementById('cName').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  if(!est.area){alert('Please enter the concrete area.');return;}
+  if(!est.crack){alert('Please choose the concrete condition.');return;}
+  if(!est.moist){alert('Please answer the moisture question.');return;}
+  if(!name||!email){alert('Please add your name and email so we can send the estimate.');return;}
+  let rate=8; if(est.crack!=='none'&&est.crack)rate+=(est.crack==='some'||est.crack==='heavy')?1:0; if(est.moist==='yes')rate+=1;
+  const low=Math.round(est.area*rate), high=Math.round(est.area*Math.min(10,rate+1));
+  document.getElementById('estCard').innerHTML=`<div class="success">
+     <div class="ic">✓</div>
+     <h3 style="color:var(--ink)">Estimate sent, ${name.split(' ')[0]}!</h3>
+     <p style="color:#5a6573;margin-top:10px">Your ballpark for ${est.area.toLocaleString()} sq ft is <b>$${low.toLocaleString()}–$${high.toLocaleString()}</b>. We've emailed a copy and we'll reach out to book your free on-site measure.</p>
+     <a href="#contact" class="btn btn-orange" style="margin-top:22px;justify-content:center">Book the free measure →</a>
+     <div class="note-build" style="text-align:left">DEMO ONLY — in the live build this writes to Supabase and emails ${email} + your inbox.</div>
+   </div>`;
+});
+showStep(1); // initialise wizard
+
+/* ============= 10-second free-estimate popup ============= */
+(function(){
+  const modal=document.getElementById('leadModal');
+  if(!modal) return;
+  const close=()=>modal.classList.remove('open');
+  const open=()=>{ if(sessionStorage.getItem('grc_popup')) return; modal.classList.add('open'); sessionStorage.setItem('grc_popup','1'); };
+  document.getElementById('modalClose').onclick=close;
+  document.getElementById('modalCta').onclick=close;
+  modal.addEventListener('click',e=>{ if(e.target===modal) close(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+  setTimeout(open,10000); // 10s after load
+})();
+
+/* ============= towns + marquee ============= */
+const towns=['Kitchener','Waterloo','Cambridge','Paris','Brantford','Milton','London','Guelph','Elmira','Hamilton'];
+const tc=document.getElementById('townChips');
+towns.forEach(t=>{const s=document.createElement('span');s.className='town';s.textContent=t;tc.appendChild(s);});
+const mt=document.getElementById('marqueeTrack');
+let mhtml='';
+for(let r=0;r<2;r++){towns.forEach(t=>{mhtml+=`<span>${t}<span class="dot"> ◆ </span></span>`;});}
+mt.innerHTML=mhtml;
+
+/* ============= cal placeholder ============= */
+document.getElementById('calBtn').addEventListener('click',e=>{e.preventDefault();alert('In the live build this opens your Cal.com booking inline. Send me your Cal.com link and I will wire it in.');});
+
+/* ============= year, menu, reveal, resize ============= */
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('menubtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* safety net: never let content stay hidden if observer misses something */
+setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')),3500);
+
+function renderAll(){renderHero();renderRiver();renderAbout();renderViz();}
+window.addEventListener('load',()=>{renderAll();});
+let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{
+  renderAll();
+  document.querySelectorAll('.svc canvas').forEach((cv,i)=>{const b=blends[services[i].blend];paintFloor(cv,b.base,b.flakes,{dens:0.02,min:3,max:7});});
+},220);});
+renderAll();
+</script>
+</body>
+</html>

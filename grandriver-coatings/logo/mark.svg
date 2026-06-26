@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Grandriver Coatings mark">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E63D6"/>
+      <stop offset="1" stop-color="#1C49A6"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="34" fill="#0B1A2B"/>
+  <!-- G ring -->
+  <g fill="none" stroke="url(#ring)" stroke-width="16" stroke-linecap="round">
+    <path d="M120 58 A42 42 0 1 1 120 102"/>
+  </g>
+  <!-- G tongue -->
+  <rect x="80" y="72" width="44" height="16" rx="8" fill="#fff"/>
+  <!-- river of flakes pouring out of the G and underlining -->
+  <path d="M70 122 q14 16 34 12 q22 -4 44 4" fill="none" stroke="#ED5A24" stroke-width="9" stroke-linecap="round"/>
+  <g>
+    <rect x="78" y="116" width="7" height="7" rx="1.6" fill="#fff" transform="rotate(18 81 119)"/>
+    <rect x="92" y="124" width="6" height="6" rx="1.4" fill="#2E63D6" transform="rotate(-12 95 127)"/>
+    <rect x="108" y="120" width="7" height="7" rx="1.6" fill="#ED5A24" transform="rotate(24 111 123)"/>
+    <rect x="124" y="126" width="6" height="6" rx="1.4" fill="#fff" transform="rotate(-20 127 129)"/>
+    <rect x="138" y="122" width="6" height="6" rx="1.4" fill="#C7CDD4" transform="rotate(14 141 125)"/>
+  </g>
+</svg>
