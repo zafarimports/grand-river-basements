@@ -124,6 +124,7 @@ p{margin:0}
 
 /* ---------- sections ---------- */
 section{position:relative}
+section[id],header[id]{scroll-margin-top:90px}
 .sec{padding:90px 0}
 .sec-paper{background:var(--paper); color:var(--ink)}
 .sec-paper .eyebrow{color:var(--orange)}
@@ -346,7 +347,7 @@ footer .brand img{height:38px}
 <!-- NAV -->
 <nav class="nav"><div class="wrap">
   <a class="brand" href="#top" aria-label="Grandriver Coatings home">
-    <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="230" height="60">
+    <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="500" height="132">
   </a>
   <div class="navlinks" id="navlinks">
     <a href="#services">Services</a>
@@ -449,7 +450,7 @@ footer .brand img{height:38px}
     <div class="sechead reveal">
       <span class="eyebrow">Before &amp; after</span>
       <h2>From cracked slab to showroom floor.</h2>
-      <p>Drag-the-slider style transformations from recent projects across the region.</p>
+      <p>Side-by-side transformations from recent projects across the region.</p>
     </div>
     <div class="gal" id="galGrid"></div>
     <div class="note-build">DESIGN NOTE: these are rendered placeholders. Swap each panel for your real before/after job photos — I'll show you exactly where in the code.</div>
@@ -624,7 +625,7 @@ footer .brand img{height:38px}
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top" style="margin-bottom:14px;display:inline-block">
-          <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="210" height="55">
+          <img src="logo/logo-white.svg" alt="Grandriver Coatings" width="500" height="132">
         </a>
         <p style="color:#9aa6b3; font-size:14px; max-width:320px">Premium polyaspartic flake floor coatings for the Grand River region. Garages, basements, patios, pool decks and commercial floors.</p>
       </div>
@@ -841,13 +842,13 @@ function renderViz(){
     // tint toward base coat so it reads as a fresh coating
     ctx.fillStyle=vizBase; ctx.globalAlpha=.32; ctx.fillRect(0,0,w,h); ctx.globalAlpha=1;
     // broadcast flakes over the photo
-    const count=Math.round(w*h*0.018);
-    for(let i=0;i<count;i++){flake(ctx,Math.random()*w,Math.random()*h,3+Math.random()*5,use[(Math.random()*use.length)|0]);}
+    const count=Math.round(w*h*0.015);
+    for(let i=0;i<count;i++){flake(ctx,Math.random()*w,Math.random()*h,3+Math.random()*6,use[(Math.random()*use.length)|0]);}
     const g=ctx.createRadialGradient(w*0.32,-h*0.2,10,w*0.32,-h*0.2,h*1.4);
     g.addColorStop(0,'rgba(255,255,255,.20)'); g.addColorStop(.5,'rgba(255,255,255,.05)'); g.addColorStop(1,'rgba(255,255,255,0)');
     ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
   } else {
-    paintFloor(cv,vizBase,use,{dens:0.02,min:4,max:9});
+    paintFloor(cv,vizBase,use,{dens:0.016,min:4,max:11});
   }
 }
 function clearPreset(){document.querySelectorAll('.preset').forEach(p=>p.classList.remove('active'));}
@@ -959,8 +960,9 @@ function calc(){
   if(est.moist==='yes'){rate+=1; adds.push(['Moisture mitigation','+$1.00']);}
   const lowRate=rate, highRate=Math.min(10,rate+1);
   const low=Math.round(est.area*lowRate), high=Math.round(est.area*highRate);
-  rateLine.textContent=`${est.area.toLocaleString()} sq ft · $${lowRate.toFixed(2)}–$${highRate.toFixed(2)} / sq ft`;
-  totalLine.innerHTML=`<em>$${low.toLocaleString()}</em> – $${high.toLocaleString()}`;
+  const rateTxt = lowRate===highRate ? `$${lowRate.toFixed(2)} / sq ft` : `$${lowRate.toFixed(2)}–$${highRate.toFixed(2)} / sq ft`;
+  rateLine.textContent=`${est.area.toLocaleString()} sq ft · ${rateTxt}`;
+  totalLine.innerHTML = low===high ? `<em>$${low.toLocaleString()}</em>` : `<em>$${low.toLocaleString()}</em> – $${high.toLocaleString()}`;
   bd.innerHTML=`Base system <span>$8.00</span>`+adds.map(a=>`${a[0]} <span>${a[1]}</span>`).join('');
 }
 document.getElementById('submitBtn').addEventListener('click',()=>{
@@ -972,10 +974,11 @@ document.getElementById('submitBtn').addEventListener('click',()=>{
   if(!name||!email){alert('Please add your name and email so we can send the estimate.');return;}
   let rate=8; if(est.crack!=='none'&&est.crack)rate+=(est.crack==='some'||est.crack==='heavy')?1:0; if(est.moist==='yes')rate+=1;
   const low=Math.round(est.area*rate), high=Math.round(est.area*Math.min(10,rate+1));
+  const priceTxt = low===high ? `$${low.toLocaleString()}` : `$${low.toLocaleString()}–$${high.toLocaleString()}`;
   document.getElementById('estCard').innerHTML=`<div class="success">
      <div class="ic">✓</div>
      <h3 style="color:var(--ink)">Estimate sent, ${name.split(' ')[0]}!</h3>
-     <p style="color:#5a6573;margin-top:10px">Your ballpark for ${est.area.toLocaleString()} sq ft is <b>$${low.toLocaleString()}–$${high.toLocaleString()}</b>. We've emailed a copy and we'll reach out to book your free on-site measure.</p>
+     <p style="color:#5a6573;margin-top:10px">Your ballpark for ${est.area.toLocaleString()} sq ft is <b>${priceTxt}</b>. We've emailed a copy and we'll reach out to book your free on-site measure.</p>
      <a href="#contact" class="btn btn-orange" style="margin-top:22px;justify-content:center">Book the free measure →</a>
      <div class="note-build" style="text-align:left">DEMO ONLY — in the live build this writes to Supabase and emails ${email} + your inbox.</div>
    </div>`;
