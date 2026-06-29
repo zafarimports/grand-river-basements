@@ -54,7 +54,7 @@ if (process.env.FTP_HOST && process.env.FTP_USER && process.env.FTP_PASS) {
     client.ftp.verbose = false;
     try {
       await client.access({
-        host: process.env.FTP_HOST,
+        host: process.env.FTP_HOST.replace(/^ftps?:\/\//i, ''),
         user: process.env.FTP_USER,
         password: process.env.FTP_PASS,
         secure: false,
