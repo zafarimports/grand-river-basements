@@ -56,3 +56,14 @@ jobs:
           # Keep an on-server log so subsequent deploys only upload changed files.
           # Remove this line for a full re-upload if the server state ever drifts.
           state-name: .ftp-deploy-sync-state.json
+
+      - name: DEBUG - list server directory and probe sibling paths over FTP
+        run: |
+          echo "--- listing target dir ---"
+          curl -sS --list-only "ftp://${FTP_USERNAME}:${FTP_PASSWORD}@${FTP_SERVER}/home/u265624396/domains/grandriverbasement.ca/public_html/"
+          echo "--- listing account home ---"
+          curl -sS --list-only "ftp://${FTP_USERNAME}:${FTP_PASSWORD}@${FTP_SERVER}/"
+          echo "--- listing domains dir ---"
+          curl -sS --list-only "ftp://${FTP_USERNAME}:${FTP_PASSWORD}@${FTP_SERVER}/home/u265624396/domains/"
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
