@@ -18,7 +18,11 @@ on:
   workflow_dispatch:
 
 env:
-  FTP_SERVER: ftp.grandriverbasement.ca
+  # "ftp.grandriverbasement.ca" has no DNS record (the domain's nameservers are
+  # at the registrar, not Hostinger, so Hostinger's convenience "ftp." hostname
+  # was never created). The bare domain resolves to the same Hostinger server
+  # and FTP listens there too, so use that instead.
+  FTP_SERVER: grandriverbasement.ca
   FTP_USERNAME: u265624396.szshaikh26
   # Hostinger FTP sub-accounts usually log in already inside public_html, so the
   # server directory is "./". If files land in the wrong place, set this to the
