@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#22443B">
+<meta name="theme-color" content="#141414">
 <script>
 (function(){
   document.documentElement.className += ' js-on';
@@ -43,7 +43,7 @@
 {{JSONLD}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Big+Shoulders+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v={{BUILD_ID}}">
 <script>window.SITE = { leadEndpoint: "{{LEAD_ENDPOINT}}", calcom: "{{CALCOM_URL}}" };</script>
 </head>
@@ -62,9 +62,9 @@
     <a href="#services">Services</a>
     <a href="#ba">Before &amp; after</a>
     <a href="#work">Work</a>
+    <a href="#areas">Areas</a>
     <a href="#calculator">Calculator</a>
     <a href="#process">Process</a>
-    <a href="#areas">Areas</a>
     <a href="#faq">FAQ</a>
   </nav>
   <div class="nav-cta">
@@ -81,9 +81,9 @@
   <a href="#services">Services</a>
   <a href="#ba">Before &amp; after</a>
   <a href="#work">Recent work</a>
+  <a href="#areas">Areas</a>
   <a href="#calculator">Cost calculator</a>
   <a href="#process">Process</a>
-  <a href="#areas">Areas we serve</a>
   <a href="#faq">FAQ</a>
   <a class="tel" href="tel:{{PHONE_TEL}}">{{PHONE}}</a>
   <a class="btn btn-primary" href="#estimate">Free estimate</a>
@@ -91,7 +91,7 @@
 <div class="nav-scrim" aria-hidden="true"></div>
 
 <!-- ========== HERO ========== -->
-<section class="hero"><div class="wrap">
+<section class="hero" id="top"><div class="wrap">
   <div class="h-text">
     <span class="eyebrow"><span class="rule"></span>Basement renovations · {{REGION}}</span>
     <h1>Basements that <em>add real value</em> to your <span class="nowrap">{{LOC_ADJ}}</span> home.</h1>
@@ -107,6 +107,13 @@
     <figcaption class="h-cred">Recent project · Cambridge</figcaption>
   </figure>
 </div></section>
+
+<!-- marquee ticker -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>Cambridge <i>◆</i></span><span>Kitchener <i>◆</i></span><span>Waterloo <i>◆</i></span><span>Guelph <i>◆</i></span><span>Paris <i>◆</i></span><span>Brantford <i>◆</i></span><span>Cambridge <i>◆</i></span><span>Kitchener <i>◆</i></span><span>Waterloo <i>◆</i></span><span>Guelph <i>◆</i></span>
+  </div>
+</div>
 
 <!-- trust strip -->
 <div class="strip"><div class="wrap">
@@ -129,31 +136,31 @@
     <div class="svc">
       <span class="n">01 / 04</span>
       <h3>Legal basement apartments</h3>
-      <p>Full second suites built to Ontario code — egress, separate entry, kitchen, sound, fire separation. The kind that adds real rental income and resale value.</p>
+      <p>Full second suites built to Ontario code — egress, separate entry, kitchen, sound, fire separation.</p>
       <div class="feat">Typically <b>$55k–$110k</b></div>
     </div>
     <div class="svc">
       <span class="n">02 / 04</span>
       <h3>Bathrooms &amp; ensuites</h3>
-      <p>Plumbing, tile, fixtures, finish work. Whether it's a new powder room or a full basement spa, we build the rough-in right and finish it cleanly.</p>
+      <p>Plumbing, tile, fixtures, finish work — done right the first time.</p>
       <div class="feat">Typically <b>$15k–$28k</b></div>
     </div>
     <div class="svc">
       <span class="n">03 / 04</span>
       <h3>Renovations &amp; additions</h3>
-      <p>Bare concrete to finished living space — framing, electrical, drywall, flooring, trim. Done by one crew so the details actually line up.</p>
+      <p>Bare concrete to finished living space — framing, electrical, drywall, flooring, trim.</p>
       <div class="feat">Typically <b>$30k–$75k</b></div>
     </div>
     <div class="svc">
       <span class="n">04 / 04</span>
       <h3>Waterproofing</h3>
-      <p>Interior and exterior systems, sump pumps, weeping tile, crack injection. We diagnose the actual source — not just paint over the symptom.</p>
+      <p>Interior and exterior systems, sump pumps, weeping tile, crack injection.</p>
       <div class="feat">Typically <b>$7k–$22k</b></div>
     </div>
   </div>
 </div></section>
 
-<!-- ========== BEFORE / AFTER REVEAL ========== -->
+<!-- ========== BEFORE / AFTER ========== -->
 <section class="block" id="ba" style="padding-top:0"><div class="wrap">
   <div class="chapter reveal">
     <div class="meta">
@@ -194,7 +201,7 @@
       <div class="gcard-info">
         <span class="gcard-tag">Legal apartment</span>
         <h3>Walnut kitchen with granite island</h3>
-        <p>Custom walnut shaker cabinetry, granite waterfall island, gas range and stainless appliances in a Cambridge basement suite.</p>
+        <p>Custom walnut shaker cabinetry, granite waterfall island, gas range and stainless appliances.</p>
         <div class="gcard-meta">Cambridge, ON<span class="dot"> · </span>Full second suite</div>
       </div>
     </article>
@@ -218,7 +225,7 @@
       <div class="gcard-info">
         <span class="gcard-tag">Legal apartment</span>
         <h3>Bright white kitchen &amp; dining</h3>
-        <p>White shaker cabinets, quartz counters, stainless appliances and a warm vinyl floor — currently rented.</p>
+        <p>White shaker cabinets, quartz counters, stainless appliances and a warm vinyl floor.</p>
         <div class="gcard-meta">Cambridge, ON</div>
       </div>
     </article>
@@ -230,7 +237,7 @@
       <div class="gcard-info">
         <span class="gcard-tag">Separate entry</span>
         <h3>Side-entry, bay-window build</h3>
-        <p>Exterior side-entry installed to make the basement suite legal — paired with proper egress and weatherproofing.</p>
+        <p>Exterior side-entry installed to make the basement suite legal — paired with proper egress.</p>
         <div class="gcard-meta">Waterloo, ON</div>
       </div>
     </article>
@@ -241,11 +248,39 @@
   </div>
 </div></section>
 
+<!-- ========== CITY CAROUSEL ========== -->
+<section class="block" id="areas" style="padding-top:0"><div class="wrap">
+  <div class="chapter reveal">
+    <div class="meta">
+      <span class="eyebrow"><span class="num">Ch. 04</span><span class="rule"></span>Where we build</span>
+    </div>
+    <h2>{{AREA_NAME}}.</h2>
+  </div>
+</div>
+
+<div class="cc-wrap reveal"><div class="wrap" style="position:relative">
+  <div class="cc-track" id="ccTrack">
+    <a class="cc-card" href="/cambridge"><img src="/p2-walnut-kitchen.webp" alt="Cambridge"><div class="grad"></div><div class="info"><div class="num">01</div><div class="name">Cambridge</div><div class="meta">Galt · Preston · Hespeler</div></div></a>
+    <a class="cc-card" href="/kitchener"><img src="/p3-bathroom.webp" alt="Kitchener"><div class="grad"></div><div class="info"><div class="num">02</div><div class="name">Kitchener</div><div class="meta">Downtown · Forest Heights · Stanley Park</div></div></a>
+    <a class="cc-card" href="/waterloo"><img src="/p4-exterior.webp" alt="Waterloo"><div class="grad"></div><div class="info"><div class="num">03</div><div class="name">Waterloo</div><div class="meta">Uptown · Eastbridge · Lakeshore</div></div></a>
+    <a class="cc-card" href="/guelph"><img src="/areas-feature.webp" alt="Guelph"><div class="grad"></div><div class="info"><div class="num">04</div><div class="name">Guelph</div><div class="meta">St. George's · Old University · Kortright Hills</div></div></a>
+    <a class="cc-card" href="/paris"><img src="/p1-white-kitchen.webp" alt="Paris"><div class="grad"></div><div class="info"><div class="num">05</div><div class="name">Paris</div><div class="meta">Downtown · Cobblestone · Brant region</div></div></a>
+    <a class="cc-card" href="/cambridge"><img src="/p2-walnut-kitchen.webp" alt="Cambridge"><div class="grad"></div><div class="info"><div class="num">01</div><div class="name">Cambridge</div><div class="meta">Galt · Preston · Hespeler</div></div></a>
+    <a class="cc-card" href="/kitchener"><img src="/p3-bathroom.webp" alt="Kitchener"><div class="grad"></div><div class="info"><div class="num">02</div><div class="name">Kitchener</div><div class="meta">Downtown · Forest Heights · Stanley Park</div></div></a>
+    <a class="cc-card" href="/waterloo"><img src="/p4-exterior.webp" alt="Waterloo"><div class="grad"></div><div class="info"><div class="num">03</div><div class="name">Waterloo</div><div class="meta">Uptown · Eastbridge · Lakeshore</div></div></a>
+    <a class="cc-card" href="/guelph"><img src="/areas-feature.webp" alt="Guelph"><div class="grad"></div><div class="info"><div class="num">04</div><div class="name">Guelph</div><div class="meta">St. George's · Old University · Kortright Hills</div></div></a>
+    <a class="cc-card" href="/paris"><img src="/p1-white-kitchen.webp" alt="Paris"><div class="grad"></div><div class="info"><div class="num">05</div><div class="name">Paris</div><div class="meta">Downtown · Cobblestone · Brant region</div></div></a>
+  </div>
+  <button class="cc-arrow l" id="ccPrev" aria-label="Previous">←</button>
+  <button class="cc-arrow r" id="ccNext" aria-label="Next">→</button>
+</div></div>
+</section>
+
 <!-- ========== CALCULATOR ========== -->
 <section class="block" id="calculator" style="padding-top:0"><div class="wrap">
   <div class="chapter reveal">
     <div class="meta">
-      <span class="eyebrow"><span class="num">Ch. 03</span><span class="rule"></span>The numbers</span>
+      <span class="eyebrow"><span class="num">Ch. 05</span><span class="rule"></span>The numbers</span>
     </div>
     <h2>Cost &amp; income calculator.</h2>
   </div>
@@ -253,7 +288,7 @@
   <div class="calc reveal">
     <div class="ctrl">
       <h3>Tell us about your basement</h3>
-      <p class="lead">Adjust the options for an instant ballpark — no email required to see it.</p>
+      <p class="lead">Adjust the options for an instant ballpark — no email required.</p>
 
       <span class="clab">Project type</span>
       <div class="pills" id="cType">
@@ -290,7 +325,7 @@
     <div class="out">
       <span class="o-eyebrow">Estimated investment</span>
       <div class="o-cost" id="oCost">$67,000 – $89,000</div>
-      <div class="o-note">A ballpark range based on local pricing. Final number depends on layout, finishes and site conditions — we confirm it after a quick site visit.</div>
+      <div class="o-note">A ballpark range based on local pricing. Final number depends on layout, finishes and site conditions.</div>
 
       <div class="o-grid" id="oIncomeWrap">
         <div class="mini"><div class="k">Est. rental income</div><div class="v" id="oRent">$1,750/mo</div></div>
@@ -298,7 +333,7 @@
       </div>
 
       <div class="o-cta">
-        <a class="btn btn-primary" href="#estimate">Get my exact quote
+        <a class="btn" href="#estimate">Get my exact quote
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -310,7 +345,7 @@
 <section class="block" id="process" style="padding-top:0"><div class="wrap">
   <div class="chapter reveal">
     <div class="meta">
-      <span class="eyebrow"><span class="num">Ch. 04</span><span class="rule"></span>The process</span>
+      <span class="eyebrow"><span class="num">Ch. 06</span><span class="rule"></span>The process</span>
     </div>
     <h2>From first click to finished suite.</h2>
   </div>
@@ -319,45 +354,22 @@
     <div class="step">
       <div class="n">Step 01</div>
       <h4>Online estimate</h4>
-      <p>Answer a few quick questions and see an instant ballpark range. No phone tag, no pressure, no surprise charges later.</p>
+      <p>Answer a few quick questions and see an instant ballpark range.</p>
     </div>
     <div class="step">
       <div class="n">Step 02</div>
       <h4>Book a call-back</h4>
-      <p>Pick a time that works for you. We call to confirm the details and arrange a free, no-obligation site visit.</p>
+      <p>Pick a time that works for you — we confirm details and a free site visit.</p>
     </div>
     <div class="step">
       <div class="n">Step 03</div>
       <h4>We build</h4>
-      <p>One trusted crew handles framing to finishing — tidy job sites, clear weekly updates, no sub-contractor shuffle.</p>
+      <p>One trusted crew handles framing to finishing, no sub-contractor shuffle.</p>
     </div>
     <div class="step">
       <div class="n">Step 04</div>
       <h4>Move in or rent out</h4>
-      <p>Inspected, signed off and finished. Enjoy your new space, or start collecting rental income within the week.</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- ========== AREAS ========== -->
-<section class="block" id="areas" style="padding-top:0"><div class="wrap">
-  <div class="chapter reveal">
-    <div class="meta">
-      <span class="eyebrow"><span class="num">Ch. 05</span><span class="rule"></span>Where we build</span>
-    </div>
-    <h2>{{AREA_NAME}}.</h2>
-  </div>
-
-  <div class="areas reveal">
-    <figure class="map-art">
-      <img src="/areas-feature.webp" alt="Walnut shaker kitchen finished in a Grand River region home" loading="lazy" width="900" height="900">
-    </figure>
-    <div class="area-list">
-      <a class="area" href="/cambridge"><span class="num">01</span><span class="name">Cambridge</span><span class="meta">Galt · Preston · Hespeler</span></a>
-      <a class="area" href="/kitchener"><span class="num">02</span><span class="name">Kitchener</span><span class="meta">Downtown · Forest Heights · Stanley Park</span></a>
-      <a class="area" href="/waterloo"><span class="num">03</span><span class="name">Waterloo</span><span class="meta">Uptown · Eastbridge · Lakeshore</span></a>
-      <a class="area" href="/guelph"><span class="num">04</span><span class="name">Guelph</span><span class="meta">St. George's · Old University · Kortright Hills</span></a>
-      <a class="area" href="/paris"><span class="num">05</span><span class="name">Paris</span><span class="meta">Downtown · Cobblestone · Brant region</span></a>
+      <p>Inspected, signed off and finished. Start collecting rent within the week.</p>
     </div>
   </div>
 </div></section>
@@ -366,14 +378,14 @@
 <section class="block" id="estimate" style="padding-top:0"><div class="wrap">
   <div class="chapter reveal">
     <div class="meta">
-      <span class="eyebrow"><span class="num">Ch. 06</span><span class="rule"></span>Your estimate</span>
+      <span class="eyebrow"><span class="num">Ch. 07</span><span class="rule"></span>Your estimate</span>
     </div>
     <h2>Get your ballpark in 60 seconds.</h2>
   </div>
 
   <div class="wizard reveal">
     <div class="wz-aside">
-      <span class="eyebrow"><span class="num">04</span><span class="rule" style="background:rgba(233,227,214,.4)"></span>Free estimate</span>
+      <span class="eyebrow"><span class="num">04</span><span class="rule"></span>Free estimate</span>
       <h2>Answer four short questions.</h2>
       <p>You'll see an instant price range, then book a quick call-back for your accurate, no-obligation quote.</p>
       <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>Instant ballpark price, on the spot</span></div>
@@ -495,15 +507,15 @@
 <section class="block" id="faq" style="padding-top:0"><div class="wrap">
   <div class="chapter reveal">
     <div class="meta">
-      <span class="eyebrow"><span class="num">Ch. 07</span><span class="rule"></span>Questions</span>
+      <span class="eyebrow"><span class="num">Ch. 08</span><span class="rule"></span>Questions</span>
     </div>
     <h2>Frequently asked.</h2>
   </div>
   <div class="faq reveal">
-    <div class="qa"><button>Do you handle permits and architectural drawings? <span class="pm">+</span></button><div class="ans"><p>Yes. We work with an architect who prepares the drawings for us and handles the permit process, so you don't have to coordinate it yourself. Everything is built to current Ontario code and signed off by the city before we finish.</p></div></div>
-    <div class="qa"><button>How much does a legal basement apartment cost in {{AREA_NAME}}? <span class="pm">+</span></button><div class="ans"><p>Most legal basement apartments range from about $45,000 to $85,000 depending on size, layout and finishes. Use our free calculator above for an instant ballpark.</p></div></div>
+    <div class="qa"><button>Do you handle permits and architectural drawings? <span class="pm">+</span></button><div class="ans"><p>Yes. We work with an architect who prepares drawings and handles permits, so you don't have to coordinate it. Everything is built to current Ontario code.</p></div></div>
+    <div class="qa"><button>How much does a legal basement apartment cost in {{AREA_NAME}}? <span class="pm">+</span></button><div class="ans"><p>Most legal basement apartments range from about $45,000 to $85,000 depending on size, layout and finishes. Use the calculator above for an instant ballpark.</p></div></div>
     <div class="qa"><button>What areas do you serve? <span class="pm">+</span></button><div class="ans"><p>Cambridge, Kitchener, Waterloo, Guelph, Paris and the surrounding Grand River region.</p></div></div>
-    <div class="qa"><button>How long does a basement project take? <span class="pm">+</span></button><div class="ans"><p>A typical legal apartment build runs 6–10 weeks once permits are in hand. Smaller renovations and bathrooms can be finished in 3–5 weeks.</p></div></div>
+    <div class="qa"><button>How long does a basement project take? <span class="pm">+</span></button><div class="ans"><p>A typical legal apartment build runs 6–10 weeks once permits are in hand. Smaller renovations and bathrooms finish in 3–5 weeks.</p></div></div>
   </div>
 </div></section>
 

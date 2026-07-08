@@ -194,6 +194,32 @@ function initCalEmbed() {
 /* ---------- FAQ ---------- */
 document.querySelectorAll('.qa button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
 
+/* ---------- CITY CAROUSEL (drag + auto-scroll, seamless loop) ---------- */
+const ccTrack = document.getElementById('ccTrack');
+if (ccTrack) {
+  let dragging = false, hover = false, startX = 0, startScroll = 0;
+  ccTrack.addEventListener('pointerdown', e => {
+    dragging = true; startX = e.clientX; startScroll = ccTrack.scrollLeft;
+    ccTrack.setPointerCapture && ccTrack.setPointerCapture(e.pointerId);
+  });
+  ccTrack.addEventListener('pointermove', e => { if (dragging) ccTrack.scrollLeft = startScroll - (e.clientX - startX); });
+  ccTrack.addEventListener('pointerup', () => { dragging = false; });
+  ccTrack.addEventListener('pointerleave', () => { dragging = false; });
+  ccTrack.addEventListener('mouseenter', () => { hover = true; });
+  ccTrack.addEventListener('mouseleave', () => { hover = false; });
+
+  const ccPrev = document.getElementById('ccPrev'), ccNext = document.getElementById('ccNext');
+  if (ccPrev) ccPrev.addEventListener('click', () => ccTrack.scrollBy({ left: -340, behavior: 'smooth' }));
+  if (ccNext) ccNext.addEventListener('click', () => ccTrack.scrollBy({ left: 340, behavior: 'smooth' }));
+
+  setInterval(() => {
+    if (hover || dragging) return;
+    ccTrack.scrollLeft += 1.4;
+    const half = ccTrack.scrollWidth / 2;
+    if (ccTrack.scrollLeft >= half) ccTrack.scrollLeft -= half;
+  }, 30);
+}
+
 /* ---------- MOBILE NAV ---------- */
 const navToggle = document.getElementById('navToggle');
 const navDrawer = document.getElementById('navDrawer');
