@@ -1,0 +1,54 @@
+name: Deploy to Hostinger (FTP)
+
+# Builds the static site and uploads it to Hostinger public_html over FTP.
+# Runs automatically on every push to the branches listed below, and can be
+# started by hand from the Actions tab (workflow_dispatch).
+#
+# Required repository secret (Settings -> Secrets and variables -> Actions):
+#   FTP_PASSWORD  - the password for the FTP user in FTP_USERNAME below
+#
+# If the FTP host, username, or target directory ever change, edit the env
+# block below — nothing else needs to change.
+
+on:
+  push:
+    branches:
+      - main
+      - claude/grand-river-basements-ne3hn4
+  workflow_dispatch:
+
+env:
+  FTP_SERVER: ftp.grandriverbasement.ca
+  FTP_USERNAME: u265624396.szshaikh26
+  # Hostinger FTP sub-accounts usually log in already inside public_html, so the
+  # server directory is "./". If files land in the wrong place, set this to the
+  # absolute path instead: /home/u265624396/domains/grandriverbasement.ca/public_html/
+  FTP_SERVER_DIR: "./"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build the static site
+        working-directory: grand-river-basements
+        run: node build.js
+
+      - name: Deploy dist/ to Hostinger over FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ env.FTP_SERVER }}
+          username: ${{ env.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: grand-river-basements/dist/
+          server-dir: ${{ env.FTP_SERVER_DIR }}
+          # Keep an on-server log so subsequent deploys only upload changed files.
+          # Remove this line for a full re-upload if the server state ever drifts.
+          state-name: .ftp-deploy-sync-state.json
