@@ -18,11 +18,11 @@ on:
   workflow_dispatch:
 
 env:
-  # "ftp.grandriverbasement.ca" has no DNS record (the domain's nameservers are
-  # at the registrar, not Hostinger, so Hostinger's convenience "ftp." hostname
-  # was never created). The bare domain resolves to the same Hostinger server
-  # and FTP listens there too, so use that instead.
-  FTP_SERVER: grandriverbasement.ca
+  # Confirmed from hPanel -> FTP Accounts: the FTP server is this IP directly.
+  # Neither "ftp.grandriverbasement.ca" (no DNS record — domain's nameservers
+  # are at the registrar, not Hostinger) nor the site's own A record (a
+  # different, web-serving IP) are the right host for FTP.
+  FTP_SERVER: 151.106.96.33
   FTP_USERNAME: u265624396.szshaikh26
   # Hostinger FTP sub-accounts usually log in already inside public_html, so the
   # server directory is "./". If files land in the wrong place, set this to the
