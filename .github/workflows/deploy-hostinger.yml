@@ -24,10 +24,10 @@ env:
   # different, web-serving IP) are the right host for FTP.
   FTP_SERVER: 151.106.96.33
   FTP_USERNAME: u265624396.szshaikh26
-  # Hostinger FTP sub-accounts usually log in already inside public_html, so the
-  # server directory is "./". If files land in the wrong place, set this to the
-  # absolute path instead: /home/u265624396/domains/grandriverbasement.ca/public_html/
-  FTP_SERVER_DIR: "./"
+  # This hosting account serves several domains, so "./" (the FTP login's
+  # default directory) is ambiguous — the first deploy landed somewhere other
+  # than grandriverbasement.ca's docroot. Use the absolute path instead.
+  FTP_SERVER_DIR: "/home/u265624396/domains/grandriverbasement.ca/public_html/"
 
 jobs:
   build-and-deploy:
