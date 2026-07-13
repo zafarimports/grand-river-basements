@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="ZATTARI — Growth Systems Studio">
+  <!-- The Signal Z: one continuous current that enters as noise (wave), cuts a decisive diagonal, and exits as a captured lead (the volt node). -->
+  <defs>
+    <linearGradient id="zflow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3EFE6"/>
+      <stop offset="1" stop-color="#D8FF3A"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 26 C 30 14, 42 34, 68 20 L 20 74 C 40 60, 52 82, 72 66"
+          stroke="url(#zflow)" stroke-width="9"/>
+    <circle cx="72" cy="66" r="7" fill="#D8FF3A" stroke="none"/>
+  </g>
+  <g fill="#F3EFE6" font-family="'Space Grotesk','Arial',sans-serif" font-weight="700">
+    <text x="100" y="56" font-size="34" letter-spacing="6">ZATTARI</text>
+    <text x="102" y="78" font-size="11" letter-spacing="5.2" fill="#9A97A3" font-weight="500">GROWTH SYSTEMS STUDIO</text>
+  </g>
+</svg>
