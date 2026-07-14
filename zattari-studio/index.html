@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZATTARI — Growth Systems Studio | Digital Marketing, Automation & Lead Generation</title>
+<meta name="description" content="ZATTARI builds lead-generation websites, marketing automation and email funnels for local businesses — designed, wired and live in days. Start a 7-day free trial: we build before you pay.">
+<meta name="keywords" content="digital marketing agency, lead generation, marketing automation, email automation, funnel builder, lead-gen websites, local SEO, Waterloo Region, Kitchener, Cambridge, Ontario">
+<meta name="author" content="ZATTARI — Growth Systems Studio">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://zattari.com/">
+<meta name="theme-color" content="#08080D">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZATTARI — Growth Systems Studio">
+<meta property="og:title" content="Websites that hunt. Automations that close.">
+<meta property="og:description" content="Done-for-you lead-generation systems: site, funnel, booking, email follow-up. Live in days. First 7 days free.">
+<meta property="og:url" content="https://zattari.com/">
+<meta property="og:image" content="https://zattari.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZATTARI — Websites that hunt. Automations that close.">
+<meta name="twitter:description" content="Done-for-you lead-generation systems. Live in days. First 7 days free.">
+<meta name="twitter:image" content="https://zattari.com/assets/og.png">
+
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect width="96" height="96" rx="20" fill="%2308080D"/><path d="M24 30 C 38 18, 50 38, 74 24 L 28 76 C 48 62, 60 84, 78 68" fill="none" stroke="%23D8FF3A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="78" cy="68" r="7" fill="%23D8FF3A"/></svg>'>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ZATTARI — Growth Systems Studio",
+  "description": "Digital marketing, automation and lead-generation systems for local businesses: lead-gen websites, email automation, booking funnels and local SEO.",
+  "url": "https://zattari.com/",
+  "email": "sohailzattari@gmail.com",
+  "areaServed": ["Kitchener", "Waterloo", "Cambridge", "Guelph", "Ontario", "Worldwide"],
+  "priceRange": "$497 - $1997 / month",
+  "makesOffer": [
+    {"@type": "Offer", "name": "Ignition — Lead-Gen Website System", "price": "497", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Momentum — Full Automation Stack", "price": "997", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Overdrive — Growth Partner", "price": "1997", "priceCurrency": "USD"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What happens during the 7-day free trial?", "acceptedAnswer": {"@type": "Answer", "text": "We build first. Within your free week you get a live draft of your lead-generation site with capture forms and instant email alerts wired in. No card required to start — you only pay if you keep it."}},
+    {"@type": "Question", "name": "How fast can my system go live?", "acceptedAnswer": {"@type": "Answer", "text": "Our standard build is audit on day 0, site built by day 3, automations wired by day 5, and live by the end of your first week."}},
+    {"@type": "Question", "name": "Who owns the website and the leads?", "acceptedAnswer": {"@type": "Answer", "text": "You do. Your domain, your lead database, your email list. If you ever leave, everything goes with you."}},
+    {"@type": "Question", "name": "What tools do you build on?", "acceptedAnswer": {"@type": "Answer", "text": "Proven, boring-reliable infrastructure: static sites for speed, Supabase for lead storage, Resend for email, Cal.com for booking, Stripe for payments, GitHub Actions for automated deploys."}},
+    {"@type": "Question", "name": "Do I need to write content or provide a design?", "acceptedAnswer": {"@type": "Answer", "text": "No. Copywriting, design, logo refinement, photography curation and SEO structure are all included. You answer a short questionnaire; we do the rest."}},
+    {"@type": "Question", "name": "Can I cancel anytime?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Month to month, no lock-in, cancel with one email. Your site and data remain yours."}}
+  ]
+}
+</script>
+
+<style>
+/* ============ TOKENS & RESET ============ */
+:root{
+  --ink:#08080D; --ink2:#0E0E16; --ink3:#14141F;
+  --bone:#F3EFE6; --bone2:#E9E4D8;
+  --volt:#D8FF3A; --volt-dim:rgba(216,255,58,.14);
+  --muted:#9A97A3; --muted-ink:#6E6B60;
+  --line:rgba(243,239,230,.14); --line-ink:rgba(8,8,13,.14);
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --nav-h:76px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--volt);color:var(--ink)}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px}
+.container{width:min(1200px,92vw);margin-inline:auto}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--volt);display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--volt);flex:none}
+.light .kicker{color:var(--ink)}
+.light .kicker::before{background:var(--ink)}
+h1,h2,h3{font-weight:700;line-height:1.04;letter-spacing:-.02em}
+.display{font-size:clamp(44px,7.2vw,104px)}
+.h2{font-size:clamp(34px,4.6vw,64px);margin:22px 0 18px}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+.volt{color:var(--volt)}
+section{position:relative;padding:clamp(84px,11vw,150px) 0}
+.light{background:var(--bone);color:var(--ink)}
+.light .muted{color:var(--muted-ink)}
+.muted{color:var(--muted)}
+
+/* ============ CURSOR ============ */
+@media (pointer:fine){
+  .cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
+  .cur-dot,.cur-ring{opacity:0}
+  body.cursor-live .cur-dot,body.cursor-live .cur-ring{opacity:1}
+  .cur-dot{width:7px;height:7px;background:var(--volt);transition:opacity .3s}
+  .cur-ring{width:36px;height:36px;border:1.5px solid rgba(216,255,58,.55);transition:opacity .3s,width .28s var(--ease),height .28s var(--ease),border-color .28s,background .28s}
+  .cur-ring.grow{width:70px;height:70px;border-color:var(--volt);background:rgba(216,255,58,.08)}
+  body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+}
+@media (pointer:coarse){.cur-dot,.cur-ring{display:none}}
+
+/* ============ INTRO ============ */
+#intro{position:fixed;inset:0;z-index:2000;background:var(--ink);display:grid;place-items:center;transition:clip-path .9s var(--ease);clip-path:inset(0 0 0 0)}
+#intro.done{clip-path:inset(0 0 100% 0);pointer-events:none}
+#intro svg{width:min(150px,34vw)}
+#intro .zpath{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 1.1s .15s var(--ease) forwards}
+#intro .znode{opacity:0;animation:pop .35s 1.15s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;height:var(--nav-h);display:flex;align-items:center;transition:background .4s,backdrop-filter .4s,height .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(8,8,13,.82);backdrop-filter:blur(14px);height:62px;border-color:var(--line)}
+nav .container{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.24em;font-size:15px}
+.brand svg{width:34px;height:34px;flex:none}
+.nav-links{display:flex;gap:34px;font-size:13.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.nav-links a{position:relative;padding:4px 0;color:var(--muted);transition:color .25s}
+.nav-links a:hover{color:var(--bone)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--volt);transition:width .3s var(--ease)}
+.nav-links a:hover::after{width:100%}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 32px;border-radius:100px;font-weight:700;font-size:15px;letter-spacing:.04em;position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s;will-change:transform}
+.btn-volt{background:var(--volt);color:var(--ink)}
+.btn-volt:hover{box-shadow:0 12px 44px rgba(216,255,58,.35)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--volt);color:var(--volt)}
+.light .btn-ghost{border-color:var(--line-ink);color:var(--ink)}
+.light .btn-ghost:hover{border-color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--bone)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-sm{padding:12px 22px;font-size:13.5px}
+
+/* ============ HERO ============ */
+#hero{min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 40px) 0 120px}
+#flow{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+#hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 32% 46%,transparent 30%,rgba(8,8,13,.72) 100%);z-index:1;pointer-events:none}
+#hero .container{position:relative;z-index:2}
+#hero .display{margin:26px 0 28px;max-width:15ch}
+#hero p.lede{max-width:52ch;font-size:clamp(17px,1.6vw,20px);color:var(--muted)}
+.hero-ctas{display:flex;gap:18px;flex-wrap:wrap;margin-top:42px}
+.hero-stats{display:flex;gap:clamp(28px,5vw,70px);margin-top:clamp(48px,7vh,84px);flex-wrap:wrap}
+.stat .num{font-size:clamp(30px,3.4vw,44px);font-weight:700;letter-spacing:-.02em}
+.stat .num em{font-family:var(--serif);font-style:italic;color:var(--volt)}
+.stat .lbl{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-cue::after{content:"";width:1.5px;height:44px;background:linear-gradient(var(--volt),transparent);animation:cue 1.8s infinite var(--ease)}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:760px){.scroll-cue{display:none}}
+
+/* split text reveal */
+.split .w{display:inline-block;overflow:hidden;vertical-align:top}
+.split .w>span{display:inline-block;transform:translateY(115%);transition:transform 1s var(--ease)}
+.split.in .w>span{transform:translateY(0)}
+
+/* ============ MARQUEE ============ */
+.marquee{border-block:1px solid var(--line);padding:20px 0;overflow:hidden;background:var(--ink2)}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marq 30s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{font-size:15px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;padding:0 28px;color:var(--muted);display:flex;align-items:center;gap:56px}
+.marquee span::after{content:"✦";color:var(--volt);font-size:13px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ REVEAL ============ */
+[data-reveal]{opacity:0;transform:translateY(38px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ============ SERVICES ============ */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-ink);border:1px solid var(--line-ink);margin-top:56px}
+@media(max-width:960px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--bone);padding:38px 32px 44px;position:relative;overflow:hidden;transition:background .35s}
+.svc::before{content:"";position:absolute;inset:auto -30% -55% auto;width:220px;height:220px;border-radius:50%;background:var(--volt);filter:blur(70px);opacity:0;transition:opacity .45s}
+.svc:hover::before{opacity:.55}
+.svc>*{position:relative}
+.svc .idx{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--muted-ink)}
+.svc h3{font-size:22px;margin:44px 0 12px;letter-spacing:-.01em}
+.svc p{font-size:15px;color:var(--muted-ink);line-height:1.65}
+.svc .go{margin-top:22px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;opacity:0;transform:translateX(-8px);transition:opacity .35s,transform .35s var(--ease)}
+.svc:hover .go{opacity:1;transform:none}
+
+/* ============ CASE STUDY ============ */
+.case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}
+.chip{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);border-radius:100px;color:var(--muted)}
+.case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px);align-items:start;margin-top:40px}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr}}
+.case-copy p{color:var(--muted);margin-bottom:18px}
+.case-points{list-style:none;margin:30px 0;display:grid;gap:14px}
+.case-points li{display:flex;gap:14px;align-items:baseline;font-size:15.5px}
+.case-points li::before{content:"→";color:var(--volt);font-weight:700;flex:none}
+/* before/after comparator */
+.ba{position:relative;aspect-ratio:4/3.4;border-radius:14px;overflow:hidden;user-select:none;touch-action:none;border:1px solid var(--line)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after-wrap{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--volt);transform:translateX(-50%);z-index:3}
+.ba .handle::after{content:"◂ ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--volt);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:1px;padding:9px 11px;border-radius:100px;white-space:nowrap;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+.ba .tag{position:absolute;bottom:14px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:rgba(8,8,13,.72);backdrop-filter:blur(6px);padding:7px 13px;border-radius:100px;z-index:2}
+.ba .tag.before{left:14px}.ba .tag.after{right:14px}
+.case-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px;perspective:900px}
+@media(max-width:620px){.case-gallery{grid-template-columns:1fr}}
+.tilt{border-radius:12px;overflow:hidden;border:1px solid var(--line);transform-style:preserve-3d;transition:transform .18s ease-out;aspect-ratio:4/3}
+.tilt img{width:100%;height:100%;object-fit:cover}
+.case-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.livechip{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--volt)}
+.livechip i{width:8px;height:8px;border-radius:50%;background:var(--volt);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(216,255,58,.55)}60%{box-shadow:0 0 0 9px rgba(216,255,58,0)}}
+/* next up */
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:70px}
+@media(max-width:760px){.next-grid{grid-template-columns:1fr}}
+.next-card{border:1px dashed var(--line);border-radius:14px;padding:34px 30px;transition:border-color .3s,background .3s}
+.next-card:hover{border-color:var(--volt);background:var(--volt-dim)}
+.next-card .idx{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--muted)}
+.next-card h3{font-size:24px;margin:14px 0 8px}
+.next-card p{font-size:14.5px;color:var(--muted)}
+
+/* ============ PROCESS ============ */
+.process{position:relative;margin-top:64px}
+.process .rail{position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line-ink)}
+.process .rail i{position:absolute;top:0;left:0;width:100%;height:calc(var(--p,0)*100%);background:var(--ink);transition:height .15s linear}
+.step{position:relative;padding:0 0 58px 58px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:2px;top:6px;width:20px;height:20px;border-radius:50%;border:2px solid var(--ink);background:var(--bone);transition:background .3s}
+.step.hit::before{background:var(--volt)}
+.step .when{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted-ink)}
+.step h3{font-size:clamp(24px,2.6vw,34px);margin:8px 0 10px}
+.step p{max-width:52ch;color:var(--muted-ink)}
+
+/* ============ PRICING ============ */
+.trial-banner{display:flex;align-items:center;gap:18px;border:1px solid var(--volt);background:var(--volt-dim);border-radius:14px;padding:22px 26px;margin:48px 0 34px;flex-wrap:wrap}
+.trial-banner strong{font-size:18px}
+.trial-banner span{color:var(--muted);font-size:14.5px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:960px){.price-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}}
+.plan{border:1px solid var(--line);border-radius:18px;padding:38px 32px;display:flex;flex-direction:column;background:var(--ink2);position:relative;transition:transform .4s var(--ease),border-color .4s}
+.plan:hover{transform:translateY(-8px);border-color:rgba(216,255,58,.5)}
+.plan.featured{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.plan.featured .muted{color:var(--muted-ink)}
+.plan .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--volt);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:8px 18px;border-radius:100px;white-space:nowrap}
+.plan h3{font-size:14px;letter-spacing:.26em;text-transform:uppercase}
+.plan .amount{font-size:52px;font-weight:700;letter-spacing:-.03em;margin:18px 0 4px}
+.plan .amount small{font-size:16px;font-weight:500;color:inherit;opacity:.55;letter-spacing:0}
+.plan .for{font-size:14px;margin-bottom:26px}
+.plan ul{list-style:none;display:grid;gap:12px;font-size:14.5px;margin-bottom:34px}
+.plan ul li{display:flex;gap:11px;align-items:baseline}
+.plan ul li::before{content:"✓";color:var(--volt);font-weight:700;flex:none}
+.plan.featured ul li::before{color:#5a7a00}
+.plan .btn{margin-top:auto;justify-content:center}
+.price-note{text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+
+/* ============ FAQ ============ */
+.faq{max-width:820px;margin:52px auto 0}
+.qa{border-bottom:1px solid var(--line-ink)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:26px 4px;font-size:clamp(17px,1.8vw,21px);font-weight:700}
+.qa .ic{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-ink);display:grid;place-items:center;font-size:16px;font-weight:500;transition:transform .35s var(--ease),background .3s,color .3s}
+.qa[open] .ic,.qa.open .ic{transform:rotate(45deg);background:var(--ink);color:var(--volt);border-color:var(--ink)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.qa .ans p{padding:0 44px 26px 4px;color:var(--muted-ink);font-size:15.5px}
+
+/* ============ FINAL CTA ============ */
+#final{text-align:center;overflow:hidden}
+#final .display{margin:24px auto 20px;max-width:14ch}
+#final .lede{color:var(--muted);max-width:46ch;margin:0 auto 40px}
+.bigmail{font-size:clamp(18px,2.6vw,26px);font-weight:500;border-bottom:1.5px solid var(--line);padding-bottom:4px;transition:color .3s,border-color .3s}
+.bigmail:hover{color:var(--volt);border-color:var(--volt)}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:52px 0;background:var(--ink2)}
+footer .container{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+footer .fine{font-size:13px;color:var(--muted)}
+footer .fnav{display:flex;gap:26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+footer .fnav a:hover{color:var(--volt)}
+
+/* ============ POPUPS & MODAL ============ */
+.overlay{position:fixed;inset:0;background:rgba(4,4,8,.72);backdrop-filter:blur(8px);z-index:1200;opacity:0;pointer-events:none;transition:opacity .35s}
+.overlay.show{opacity:1;pointer-events:auto}
+.pop{position:fixed;z-index:1300;left:50%;top:50%;transform:translate(-50%,-50%) scale(.92);width:min(560px,92vw);background:var(--bone);color:var(--ink);border-radius:20px;padding:44px 42px;opacity:0;pointer-events:none;transition:opacity .4s,transform .45s var(--ease)}
+.pop.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.pop .x,.slidein .x{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:17px;border:1px solid var(--line-ink);transition:background .25s,color .25s}
+.pop .x:hover,.slidein .x:hover{background:var(--ink);color:var(--volt)}
+.pop .kicker{margin-bottom:14px}
+.pop h3{font-size:clamp(26px,3.4vw,34px);line-height:1.08;margin-bottom:12px}
+.pop p{color:var(--muted-ink);font-size:15.5px;margin-bottom:24px}
+.slidein{position:fixed;z-index:1100;right:22px;bottom:22px;width:min(380px,calc(100vw - 44px));background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;transform:translateY(calc(100% + 40px));transition:transform .6s var(--ease);box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.slidein.show{transform:none}
+.slidein h4{font-size:18px;margin-bottom:6px}
+.slidein p{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.slidein .x{border-color:var(--line);color:var(--muted)}
+
+/* checkout modal */
+.modal{position:fixed;inset:0;z-index:1400;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s;background:rgba(4,4,8,.7);backdrop-filter:blur(7px)}
+.modal.show{opacity:1;pointer-events:auto}
+.modal .sheet{width:min(680px,94vw);max-height:92svh;overflow:auto;background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4vw,48px);position:relative;transform:translateY(24px) scale(.97);transition:transform .45s var(--ease)}
+.modal.show .sheet{transform:none}
+.modal .x{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted)}
+.modal .x:hover{border-color:var(--volt);color:var(--volt)}
+.steps{display:flex;gap:8px;margin-bottom:30px}
+.steps i{height:3px;flex:1;background:var(--line);border-radius:3px;overflow:hidden;position:relative}
+.steps i::after{content:"";position:absolute;inset:0;background:var(--volt);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.steps i.on::after{transform:scaleX(1)}
+.mstep{display:none}
+.mstep.on{display:block;animation:fadeup .5s var(--ease)}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.mstep h3{font-size:clamp(24px,3vw,32px);margin-bottom:8px}
+.mstep>p{color:var(--muted);font-size:15px;margin-bottom:26px}
+.plan-pick{display:grid;gap:12px}
+.plan-pick label{display:flex;justify-content:space-between;align-items:center;gap:14px;border:1.5px solid var(--line);border-radius:14px;padding:19px 22px;cursor:pointer;transition:border-color .25s,background .25s}
+.plan-pick label:hover{border-color:rgba(216,255,58,.5)}
+.plan-pick input{accent-color:var(--volt);width:18px;height:18px;flex:none}
+.plan-pick label.sel{border-color:var(--volt);background:var(--volt-dim)}
+.plan-pick .pn{font-weight:700;letter-spacing:.08em}
+.plan-pick .pp{color:var(--muted);font-size:14px;white-space:nowrap}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--ink);border:1.5px solid var(--line);color:var(--bone);border-radius:12px;padding:15px 18px;font-family:inherit;font-size:15.5px;transition:border-color .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--volt)}
+.field.err input{border-color:#ff5f56}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.f-row{grid-template-columns:1fr}}
+.m-actions{display:flex;justify-content:space-between;gap:14px;margin-top:30px;flex-wrap:wrap}
+.linkback{color:var(--muted);font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.linkback:hover{color:var(--bone)}
+.summary{border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:24px;font-size:14.5px;display:grid;gap:9px}
+.summary .row{display:flex;justify-content:space-between;gap:16px}
+.summary .row b{font-weight:700}
+.summary .free{color:var(--volt);font-weight:700}
+.success{text-align:center;padding:20px 0}
+.success .badge{width:78px;height:78px;margin:0 auto 24px;border-radius:50%;background:var(--volt);color:var(--ink);display:grid;place-items:center;font-size:34px;animation:pop .5s var(--ease)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:1500}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none}
+  .split .w>span{transform:none}
+  #flow{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- intro: logo stroke-draw -->
+<div id="intro" aria-hidden="true">
+  <svg viewBox="0 0 96 96" fill="none">
+    <path class="zpath" d="M24 30 C 38 18, 50 38, 74 24 L 28 76 C 48 62, 60 84, 78 68" stroke="#D8FF3A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle class="znode" cx="78" cy="68" r="7" fill="#D8FF3A"/>
+  </svg>
+</div>
+
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+
+<nav id="nav">
+  <div class="container">
+    <a class="brand" href="#hero" aria-label="ZATTARI home">
+      <svg viewBox="0 0 96 96" fill="none" aria-hidden="true"><path d="M24 30 C 38 18, 50 38, 74 24 L 28 76 C 48 62, 60 84, 78 68" stroke="#D8FF3A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="78" cy="68" r="7" fill="#D8FF3A"/></svg>
+      ZATTARI
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button class="btn btn-volt btn-sm magnetic" data-open-checkout data-plan="momentum">Start free trial</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="hero">
+  <canvas id="flow" aria-hidden="true"></canvas>
+  <div class="container">
+    <p class="kicker">Digital Marketing · Automation · Lead Generation</p>
+    <h1 class="display split" id="heroTitle">
+      Websites that <em class="serif volt">hunt.</em><br>
+      Automations that <em class="serif volt">close.</em>
+    </h1>
+    <p class="lede">ZATTARI builds complete lead-generation systems for businesses that are too busy doing great work to chase customers — site, funnel, booking, and follow-up, designed and wired live in days. You keep the craft. The system fills the calendar.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-volt magnetic" data-open-checkout data-plan="momentum">Start your 7-day free trial <span class="arr">→</span></button>
+      <a class="btn btn-ghost magnetic" href="#work">See a live system</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="num"><span data-count="7">0</span> <em>days</em></div><div class="lbl">Free trial — no card</div></div>
+      <div class="stat"><div class="num"><span data-count="48">0</span> <em>hrs</em></div><div class="lbl">Fastest launch to date</div></div>
+      <div class="stat"><div class="num"><span data-count="24">0</span>/<span data-count="7">0</span></div><div class="lbl">Follow-up never sleeps</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll</div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marq">
+    <span>Lead-Gen Websites</span><span>Email Automation</span><span>Booking Funnels</span><span>Local SEO</span><span>CRM Wiring</span><span>Exit Funnels</span><span>Ad Landing Pages</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="light">
+  <div class="container">
+    <p class="kicker" data-reveal>What we build</p>
+    <h2 class="h2" data-reveal>One system. <em class="serif">Every</em> moving part.</h2>
+    <p class="muted" style="max-width:56ch" data-reveal>Most agencies sell you a website. We ship the machine around it — the capture, the alerting, the follow-up, the booking — so a visitor at 2 a.m. becomes a meeting on your calendar by 9.</p>
+    <div class="svc-grid">
+      <article class="svc" data-reveal>
+        <span class="idx">01</span><h3>Lead-Generation Websites</h3>
+        <p>Not brochures. Every section is engineered to capture — sticky calls-to-action, instant forms, social proof, sub-second loads.</p>
+        <span class="go">Included in every plan →</span>
+      </article>
+      <article class="svc" data-reveal>
+        <span class="idx">02</span><h3>Marketing Automation</h3>
+        <p>Enquiry → database → owner alerted in seconds → follow-up sequence begins. Zero human latency between interest and contact.</p>
+        <span class="go">Wired &amp; tested for you →</span>
+      </article>
+      <article class="svc" data-reveal>
+        <span class="idx">03</span><h3>Email Sequences &amp; Nurture</h3>
+        <p>Welcome, nurture, quote follow-up, win-back. Written in your voice, designed on brand, scheduled and sending on autopilot.</p>
+        <span class="go">7-email launch pack →</span>
+      </article>
+      <article class="svc" data-reveal>
+        <span class="idx">04</span><h3>Booking &amp; CRM Wiring</h3>
+        <p>Cal.com or Calendly embedded on-page, every lead logged and synced, no-shows chased automatically. No copy-pasting, ever.</p>
+        <span class="go">Calendar fills itself →</span>
+      </article>
+      <article class="svc" data-reveal>
+        <span class="idx">05</span><h3>Local SEO &amp; Structured Data</h3>
+        <p>Schema markup, city landing pages, Google Business tuning. When your neighbourhood searches, you're the answer.</p>
+        <span class="go">Own your service area →</span>
+      </article>
+      <article class="svc" data-reveal>
+        <span class="idx">06</span><h3>Funnels, Popups &amp; Checkout</h3>
+        <p>Exit-intent offers, scroll-triggered prompts, multi-step checkout flows. Frequency-capped and polite — the kind visitors forgive.</p>
+        <span class="go">Like the ones on this page →</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDY ============ -->
+<section id="work">
+  <div class="container">
+    <div class="case-head">
+      <div>
+        <p class="kicker" data-reveal>Case study 001</p>
+        <h2 class="h2" data-reveal>Grand River <em class="serif volt">Basements</em></h2>
+      </div>
+      <a class="livechip" href="https://grandriverbasement.ca" target="_blank" rel="noopener" data-reveal><i></i> Live — grandriverbasement.ca</a>
+    </div>
+    <div class="case-grid">
+      <div class="case-copy" data-reveal>
+        <p>A basement renovation company serving Ontario's Waterloo region didn't need another pretty website — it needed a machine that never lets an enquiry slip. We designed an editorial marketing site and wired a complete pipeline behind it.</p>
+        <ul class="case-points">
+          <li>Every enquiry is captured to a Supabase database — nothing lives in an inbox alone.</li>
+          <li>The owner is alerted by email within seconds of a form submit, via an edge function and Resend.</li>
+          <li>Prospects book consultations straight into the calendar through an embedded Cal.com flow.</li>
+          <li>Local SEO structure targets five cities: Cambridge, Kitchener, Waterloo, Guelph and Paris.</li>
+          <li>Deploys ship automatically to Hostinger through a GitHub Actions FTP pipeline.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Supabase</span><span class="chip">Resend</span><span class="chip">Cal.com</span><span class="chip">GitHub Actions</span><span class="chip">Hostinger</span><span class="chip">Schema.org</span>
+        </div>
+        <div class="case-cta">
+          <a class="btn btn-ghost magnetic" href="https://grandriverbasement.ca" target="_blank" rel="noopener">Visit the live site <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div data-reveal>
+        <div class="ba" id="ba" aria-label="Before and after basement renovation comparison — drag to compare">
+          <img src="assets/ba-after.webp" alt="Finished bright basement living space after renovation" loading="lazy">
+          <div class="after-wrap"><img src="assets/ba-before.webp" alt="Dated basement kitchen before renovation" loading="lazy"></div>
+          <div class="handle" aria-hidden="true"></div>
+          <span class="tag before">Before</span><span class="tag after">After</span>
+        </div>
+        <p class="muted" style="font-size:13px;margin-top:12px;letter-spacing:.06em">↔ Drag to compare — their craft, presented by ours.</p>
+      </div>
+    </div>
+    <div class="case-gallery">
+      <div class="tilt" data-reveal><img src="assets/hero.webp" alt="Finished basement family room with warm lighting" loading="lazy"></div>
+      <div class="tilt" data-reveal><img src="assets/p1-white-kitchen.webp" alt="White basement kitchenette build" loading="lazy"></div>
+      <div class="tilt" data-reveal><img src="assets/p3-bathroom.webp" alt="Modern basement bathroom renovation" loading="lazy"></div>
+    </div>
+    <div class="next-grid">
+      <div class="next-card" data-reveal>
+        <span class="idx">Case study 002 — In the lab</span>
+        <h3>Zafar Imports</h3>
+        <p>Product catalogue, enquiry pipeline and supplier automations for an import business. Currently in build.</p>
+      </div>
+      <div class="next-card" data-reveal>
+        <span class="idx">Case study 003 — Reserved</span>
+        <h3>Your business here</h3>
+        <p>The next system we ship could be yours. Your first week of the build is free — <button data-open-checkout data-plan="momentum" style="text-decoration:underline;text-underline-offset:3px;font-weight:700">claim the slot →</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="light">
+  <div class="container">
+    <p class="kicker" data-reveal>How it works</p>
+    <h2 class="h2" data-reveal>Seven days from <em class="serif">handshake</em> to hunting.</h2>
+    <div class="process" id="processRail">
+      <div class="rail"><i id="railFill"></i></div>
+      <div class="step" data-reveal>
+        <span class="when">Day 0 — Audit</span>
+        <h3>We map the gap.</h3>
+        <p>A short questionnaire and a 20-minute call. We study your customers' path, your competitors' weaknesses, and where enquiries are leaking today.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="when">Days 1–3 — Build</span>
+        <h3>The storefront goes up.</h3>
+        <p>Design, copywriting, logo refinement, photography curation, SEO structure. You see a live draft link — not a mock-up — by day three.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="when">Days 4–5 — Automate</span>
+        <h3>The machine gets wired.</h3>
+        <p>Capture forms, instant lead alerts, booking calendar, email sequences, popups. Every path is tested end-to-end with real submissions.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="when">Day 6+ — Scale</span>
+        <h3>The system compounds.</h3>
+        <p>Local SEO pages, ad landing variants, A/B tests, monthly reporting. Your trial ends, the decision is easy, and the machine keeps running.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="container">
+    <p class="kicker" data-reveal>Pricing</p>
+    <h2 class="h2" data-reveal>We build <em class="serif volt">before</em> you pay.</h2>
+    <div class="trial-banner" data-reveal>
+      <strong>⚡ Every plan starts with a 7-day free trial.</strong>
+      <span>No card up front. We build your system during the trial — if it doesn't impress you, walk away and owe nothing.</span>
+    </div>
+    <div class="price-grid">
+      <div class="plan" data-reveal>
+        <h3>Ignition</h3>
+        <div class="amount">$497<small>/mo</small></div>
+        <p class="for muted">For businesses that need a site that finally earns its keep.</p>
+        <ul>
+          <li>Lead-generation website, designed &amp; written for you</li>
+          <li>Capture forms with instant email alerts</li>
+          <li>Booking calendar embedded on-page</li>
+          <li>Hosting, SSL &amp; automated deploys included</li>
+          <li>One improvement sprint every month</li>
+        </ul>
+        <button class="btn btn-ghost magnetic" data-open-checkout data-plan="ignition">Start free trial</button>
+      </div>
+      <div class="plan featured" data-reveal>
+        <span class="tag">Most chosen</span>
+        <h3>Momentum</h3>
+        <div class="amount">$997<small>/mo</small></div>
+        <p class="for muted">The full machine — capture, nurture, book, repeat.</p>
+        <ul>
+          <li>Everything in Ignition</li>
+          <li>7-email automation pack: welcome, nurture, win-back</li>
+          <li>Exit-intent &amp; scroll funnels with frequency caps</li>
+          <li>Local SEO: schema, city pages, Google Business</li>
+          <li>CRM wiring — every lead logged &amp; synced</li>
+          <li>Monthly performance report, plain English</li>
+        </ul>
+        <button class="btn btn-ink magnetic" data-open-checkout data-plan="momentum">Start free trial</button>
+      </div>
+      <div class="plan" data-reveal>
+        <h3>Overdrive</h3>
+        <div class="amount">$1,997<small>/mo</small></div>
+        <p class="for muted">A growth partner on retainer, shipping every week.</p>
+        <ul>
+          <li>Everything in Momentum</li>
+          <li>Ad landing pages &amp; A/B testing program</li>
+          <li>Unlimited change requests, 24-hour build queue</li>
+          <li>Quarterly strategy session</li>
+          <li>Priority support, direct line</li>
+        </ul>
+        <button class="btn btn-ghost magnetic" data-open-checkout data-plan="overdrive">Start free trial</button>
+      </div>
+    </div>
+    <p class="price-note" data-reveal>Month to month. Cancel with one email. You own your domain, your site, and every lead — forever.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="light">
+  <div class="container">
+    <p class="kicker" data-reveal>Questions</p>
+    <h2 class="h2" data-reveal>Asked <em class="serif">before</em> you ask.</h2>
+    <div class="faq" data-reveal>
+      <div class="qa"><button aria-expanded="false">What happens during the 7-day free trial?<span class="ic">+</span></button>
+        <div class="ans"><p>We build first. Within your free week you get a live draft of your lead-generation site with capture forms and instant alerts wired in. No card required to start — you only pay if you keep it.</p></div></div>
+      <div class="qa"><button aria-expanded="false">How fast can my system go live?<span class="ic">+</span></button>
+        <div class="ans"><p>Audit on day 0, site built by day 3, automations wired by day 5, live by the end of week one. Our fastest launch so far took 48 hours.</p></div></div>
+      <div class="qa"><button aria-expanded="false">Who owns the website and the leads?<span class="ic">+</span></button>
+        <div class="ans"><p>You do — your domain, your lead database, your email list. If you ever leave, everything goes with you, exported and documented.</p></div></div>
+      <div class="qa"><button aria-expanded="false">What tools do you build on?<span class="ic">+</span></button>
+        <div class="ans"><p>Boring-reliable infrastructure: hand-built static sites for speed, Supabase for lead storage, Resend for email, Cal.com for booking, Stripe for payments, GitHub Actions for automated deploys. No fragile page builders.</p></div></div>
+      <div class="qa"><button aria-expanded="false">Do I need to write content or provide a design?<span class="ic">+</span></button>
+        <div class="ans"><p>No. Copywriting, design, logo refinement, photo curation and SEO structure are included in every plan. You answer a short questionnaire; we do the rest.</p></div></div>
+      <div class="qa"><button aria-expanded="false">Can I cancel anytime?<span class="ic">+</span></button>
+        <div class="ans"><p>Yes — month to month, no lock-in, cancel with one email. Your site and your data remain yours.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="final">
+  <div class="container">
+    <p class="kicker" style="justify-content:center" data-reveal>Last call</p>
+    <h2 class="display" data-reveal>Stop scrolling. Start <em class="serif volt">compounding.</em></h2>
+    <p class="lede" data-reveal>Your competitors' websites are asleep right now. Yours could be following up.</p>
+    <div data-reveal>
+      <button class="btn btn-volt magnetic" style="font-size:17px;padding:21px 44px" data-open-checkout data-plan="momentum">Claim your free week <span class="arr">→</span></button>
+    </div>
+    <p style="margin-top:44px" data-reveal><a class="bigmail" href="mailto:sohailzattari@gmail.com">sohailzattari@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a class="brand" href="#hero">
+      <svg viewBox="0 0 96 96" fill="none" aria-hidden="true"><path d="M24 30 C 38 18, 50 38, 74 24 L 28 76 C 48 62, 60 84, 78 68" stroke="#D8FF3A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="78" cy="68" r="7" fill="#D8FF3A"/></svg>
+      ZATTARI
+    </a>
+    <div class="fnav">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="mailto:sohailzattari@gmail.com">Contact</a>
+    </div>
+    <p class="fine">© 2026 ZATTARI — Growth Systems Studio · Built in Waterloo Region, Ontario</p>
+  </div>
+</footer>
+
+<!-- ============ EXIT-INTENT POPUP ============ -->
+<div class="overlay" id="popOverlay"></div>
+<div class="pop" id="exitPop" role="dialog" aria-modal="true" aria-labelledby="exitPopTitle">
+  <button class="x" aria-label="Close">✕</button>
+  <p class="kicker">Before you go</p>
+  <h3 id="exitPopTitle">Leave with a free week, at least.</h3>
+  <p>We'll build your lead-generation system during a 7-day free trial — live draft, working forms, instant alerts. No card. If it doesn't impress you, you've lost nothing.</p>
+  <button class="btn btn-ink magnetic" data-open-checkout data-plan="momentum">Start my free trial <span class="arr">→</span></button>
+</div>
+
+<!-- ============ SCROLL SLIDE-IN ============ -->
+<aside class="slidein" id="slideIn" aria-label="Free trial offer">
+  <button class="x" aria-label="Dismiss">✕</button>
+  <h4>Liking what the page does? 👀</h4>
+  <p>Every animation, popup and funnel here is what we build for clients. Get yours — first week free.</p>
+  <button class="btn btn-volt btn-sm" data-open-checkout data-plan="momentum">Claim free week →</button>
+</aside>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal" id="checkout" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+  <div class="sheet">
+    <button class="x" aria-label="Close checkout">✕</button>
+    <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+    <div class="mstep on" data-step="1">
+      <h3 id="coTitle">Pick your engine.</h3>
+      <p>Every plan starts with the same 7-day free trial — we build before you pay.</p>
+      <div class="plan-pick" id="planPick">
+        <label><span><input type="radio" name="plan" value="ignition"> <span class="pn">IGNITION</span></span><span class="pp">$497/mo · site + capture + booking</span></label>
+        <label class="sel"><span><input type="radio" name="plan" value="momentum" checked> <span class="pn">MOMENTUM</span></span><span class="pp">$997/mo · full automation stack</span></label>
+        <label><span><input type="radio" name="plan" value="overdrive"> <span class="pn">OVERDRIVE</span></span><span class="pp">$1,997/mo · growth partner</span></label>
+      </div>
+      <div class="m-actions"><span></span><button class="btn btn-volt magnetic" data-next>Continue <span class="arr">→</span></button></div>
+    </div>
+
+    <div class="mstep" data-step="2">
+      <h3>Tell us who we're building for.</h3>
+      <p>Sixty seconds. This becomes the brief for your day-0 audit.</p>
+      <form id="leadForm" novalidate>
+        <div class="f-row">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="f-row">
+          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" type="text" autocomplete="organization" required></div>
+          <div class="field"><label for="f-web">Current website <span style="opacity:.5;text-transform:none;letter-spacing:0">(optional)</span></label><input id="f-web" name="website" type="url" placeholder="https://"></div>
+        </div>
+        <div class="field"><label for="f-goal">What should the system do for you?</label>
+          <select id="f-goal" name="goal">
+            <option>Fill my calendar with booked calls</option>
+            <option>Capture &amp; follow up every enquiry</option>
+            <option>Launch a new offer with a funnel</option>
+            <option>Rank locally &amp; own my service area</option>
+            <option>All of it — build me the machine</option>
+          </select>
+        </div>
+      </form>
+      <div class="m-actions">
+        <button class="linkback" data-back>← Back</button>
+        <button class="btn btn-volt magnetic" data-next>Review <span class="arr">→</span></button>
+      </div>
+    </div>
+
+    <div class="mstep" data-step="3">
+      <h3>Confirm your free week.</h3>
+      <p>Here's the deal, in plain terms:</p>
+      <div class="summary">
+        <div class="row"><span>Plan</span><b id="sumPlan">Momentum — $997/mo</b></div>
+        <div class="row"><span>Today's charge</span><b class="free">$0.00 — trial, no card</b></div>
+        <div class="row"><span>Days 0–7</span><b>We build your live system</b></div>
+        <div class="row"><span>Day 7</span><b>Keep it → secure Stripe checkout · or walk away</b></div>
+      </div>
+      <div class="m-actions">
+        <button class="linkback" data-back>← Back</button>
+        <button class="btn btn-volt magnetic" id="submitTrial">Start my free trial <span class="arr">→</span></button>
+      </div>
+    </div>
+
+    <div class="mstep" data-step="4">
+      <div class="success">
+        <div class="badge">✓</div>
+        <h3>You're in. Day 0 starts now.</h3>
+        <p class="muted" style="max-width:44ch;margin:12px auto 28px">Check your inbox — your welcome email and audit questionnaire are on the way. We'll reply within one business day with your build schedule.</p>
+        <button class="btn btn-ghost magnetic" data-close-checkout>Back to the site</button>
+      </div>
+    </div>
+  </div>
+</div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script>
+/* ================= CONFIG — wire your real endpoints here ================= */
+const CONFIG = {
+  LEAD_ENDPOINT: "",            // e.g. your Supabase Edge Function URL (same pattern as notify-lead)
+  CONTACT_EMAIL: "sohailzattari@gmail.com",
+  STRIPE_LINKS: {               // paste Stripe Payment Links (7-day-trial prices) when ready
+    ignition:  "",
+    momentum:  "",
+    overdrive: ""
+  },
+  PLAN_LABELS: {
+    ignition:  "Ignition — $497/mo",
+    momentum:  "Momentum — $997/mo",
+    overdrive: "Overdrive — $1,997/mo"
+  }
+};
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $  = (s,ctx=document)=>ctx.querySelector(s);
+const $$ = (s,ctx=document)=>[...ctx.querySelectorAll(s)];
+
+/* ================= INTRO ================= */
+addEventListener("load",()=>{ setTimeout(()=>$("#intro").classList.add("done"), reduced?50:1550); });
+setTimeout(()=>$("#intro").classList.add("done"), 3200); // failsafe
+
+/* ================= CUSTOM CURSOR ================= */
+if (matchMedia("(pointer:fine)").matches && !reduced){
+  document.body.classList.add("has-cursor");
+  const dot=$(".cur-dot"), ring=$(".cur-ring");
+  let x=innerWidth/2,y=innerHeight/2,rx=x,ry=y;
+  addEventListener("mousemove",e=>{document.body.classList.add("cursor-live");x=e.clientX;y=e.clientY;dot.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;});
+  (function loop(){ rx+=(x-rx)*.16; ry+=(y-ry)*.16; ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
+  document.addEventListener("mouseover",e=>{ ring.classList.toggle("grow", !!e.target.closest("a,button,label,.ba")); });
+}
+
+/* ================= MAGNETIC BUTTONS ================= */
+if (matchMedia("(pointer:fine)").matches && !reduced){
+  $$(".magnetic").forEach(el=>{
+    el.addEventListener("mousemove",e=>{
+      const r=el.getBoundingClientRect();
+      el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    el.addEventListener("mouseleave",()=>{ el.style.transform=""; });
+  });
+}
+
+/* ================= FLOW FIELD (generative hero) =================
+   Particles ride a pseudo-noise vector field with a rightward drift —
+   raw traffic entering the frame and converging into a pipeline. */
+(function(){
+  const cv=$("#flow"); if(!cv||reduced) return;
+  const ctx=cv.getContext("2d");
+  let W,H,parts=[],running=true,t=0;
+  const N = matchMedia("(max-width:760px)").matches ? 120 : 320;
+  function noise(x,y,t){ return Math.sin(x*.0016+t*.00022)*Math.cos(y*.0019-t*.00017)+Math.sin((x+y)*.0009+t*.00013); }
+  function size(){ W=cv.width=cv.offsetWidth*devicePixelRatio; H=cv.height=cv.offsetHeight*devicePixelRatio; }
+  function spawn(p){ p.x=Math.random()*W*.25-W*.05; p.y=Math.random()*H; p.vx=0; p.vy=0; p.life=400+Math.random()*400; p.volt=Math.random()<.12; return p; }
+  function init(){ size(); parts=Array.from({length:N},()=>spawn({})); ctx.fillStyle="rgba(8,8,13,1)"; ctx.fillRect(0,0,W,H); }
+  init(); addEventListener("resize",init);
+  function frame(){
+    if(!running){ requestAnimationFrame(frame); return; }
+    t=performance.now();
+    ctx.fillStyle="rgba(8,8,13,.085)"; ctx.fillRect(0,0,W,H);
+    for(const p of parts){
+      const a=noise(p.x,p.y,t)*Math.PI*1.4;
+      p.vx+= (Math.cos(a)*.14 + .12)*devicePixelRatio;      // rightward drift = pipeline
+      p.vy+= Math.sin(a)*.14*devicePixelRatio;
+      p.vx*=.94; p.vy*=.94;
+      const px=p.x, py=p.y;
+      p.x+=p.vx; p.y+=p.vy; p.life--;
+      ctx.strokeStyle = p.volt ? "rgba(216,255,58,.8)" : "rgba(243,239,230,.32)";
+      ctx.lineWidth = (p.volt?1.5:1)*devicePixelRatio;
+      ctx.beginPath(); ctx.moveTo(px,py); ctx.lineTo(p.x,p.y); ctx.stroke();
+      if(p.life<0||p.x>W+20||p.y<-20||p.y>H+20) spawn(p);
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  new IntersectionObserver(([e])=>{running=e.isIntersecting;}).observe(cv);
+  document.addEventListener("visibilitychange",()=>{running=!document.hidden;});
+})();
+
+/* ================= SPLIT-TEXT HEADLINE ================= */
+(function(){
+  const el=$("#heroTitle"); if(!el||reduced){ el&&el.classList.add("in"); return; }
+  const wrap=node=>{
+    [...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){
+        const frag=document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(word=>{
+          if(!word.trim()){ frag.appendChild(document.createTextNode(word)); return; }
+          const w=document.createElement("span"); w.className="w";
+          const inner=document.createElement("span"); inner.textContent=word;
+          w.appendChild(inner); frag.appendChild(w);
+        });
+        node.replaceChild(frag,n);
+      } else if(n.nodeType===1 && n.tagName!=="BR") wrap(n);
+    });
+  };
+  wrap(el);
+  $$(".w>span",el).forEach((s,i)=>s.style.transitionDelay=(1.35+i*.07)+"s");
+  requestAnimationFrame(()=>el.classList.add("in"));
+})();
+
+/* ================= SCROLL REVEALS ================= */
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }),{threshold:.14});
+$$("[data-reveal]").forEach((el,i)=>{ el.style.transitionDelay=(i%4)*.08+"s"; io.observe(el); });
+
+/* ================= COUNT-UP STATS ================= */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const end=+e.target.dataset.count, t0=performance.now(), dur=1400;
+  (function tick(now){
+    const p=Math.min((now-t0)/dur,1), ease=1-Math.pow(1-p,3);
+    e.target.textContent=Math.round(end*ease);
+    if(p<1) requestAnimationFrame(tick);
+  })(t0);
+}),{threshold:.6});
+$$("[data-count]").forEach(el=>cio.observe(el));
+
+/* ================= NAV ================= */
+const nav=$("#nav");
+addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>40),{passive:true});
+
+/* ================= MARQUEE (duplicate for seamless loop) ================= */
+$("#marq").innerHTML += $("#marq").innerHTML;
+
+/* ================= BEFORE / AFTER COMPARATOR ================= */
+(function(){
+  const ba=$("#ba"); if(!ba) return;
+  const set=x=>{ const r=ba.getBoundingClientRect(); ba.style.setProperty("--pos",Math.max(4,Math.min(96,(x-r.left)/r.width*100))+"%"); };
+  let drag=false;
+  ba.addEventListener("pointerdown",e=>{drag=true;ba.setPointerCapture(e.pointerId);set(e.clientX);});
+  ba.addEventListener("pointermove",e=>drag&&set(e.clientX));
+  ba.addEventListener("pointerup",()=>drag=false);
+})();
+
+/* ================= 3D TILT CARDS ================= */
+if(matchMedia("(pointer:fine)").matches && !reduced){
+  $$(".tilt").forEach(card=>{
+    card.addEventListener("mousemove",e=>{
+      const r=card.getBoundingClientRect();
+      const rx=((e.clientY-r.top)/r.height-.5)*-10, ry=((e.clientX-r.left)/r.width-.5)*10;
+      card.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+    });
+    card.addEventListener("mouseleave",()=>card.style.transform="");
+  });
+}
+
+/* ================= PROCESS RAIL (scroll-linked) ================= */
+(function(){
+  const rail=$("#processRail"); if(!rail) return;
+  const fill=$("#railFill"), steps=$$(".step",rail);
+  addEventListener("scroll",()=>{
+    const r=rail.getBoundingClientRect();
+    const p=Math.max(0,Math.min(1,(innerHeight*.72-r.top)/r.height));
+    fill.style.setProperty("--p",p);
+    steps.forEach(s=>{ s.classList.toggle("hit", s.getBoundingClientRect().top < innerHeight*.72); });
+  },{passive:true});
+})();
+
+/* ================= FAQ ACCORDION ================= */
+$$(".qa").forEach(qa=>{
+  const btn=$("button",qa), ans=$(".ans",qa);
+  btn.addEventListener("click",()=>{
+    const open=qa.classList.toggle("open");
+    btn.setAttribute("aria-expanded",open);
+    ans.style.maxHeight=open?ans.scrollHeight+"px":"0";
+    $$(".qa").forEach(o=>{ if(o!==qa&&o.classList.contains("open")){ o.classList.remove("open"); $("button",o).setAttribute("aria-expanded","false"); $(".ans",o).style.maxHeight="0"; }});
+  });
+});
+
+/* ================= POPUP ENGINE =================
+   One offer max per visit; exit-intent capped to once per 3 days. */
+const Pop=(function(){
+  const KEY="ztr_pop_at", shownThisVisit={exit:false,slide:false};
+  const capped=()=>Date.now()-(+localStorage.getItem(KEY)||0) < 3*864e5;
+  function openExit(){
+    if(shownThisVisit.exit||capped()||$("#checkout").classList.contains("show")) return;
+    shownThisVisit.exit=true; localStorage.setItem(KEY,Date.now());
+    $("#popOverlay").classList.add("show"); $("#exitPop").classList.add("show");
+  }
+  function closeExit(){ $("#popOverlay").classList.remove("show"); $("#exitPop").classList.remove("show"); }
+  document.addEventListener("mouseout",e=>{ if(!e.relatedTarget && e.clientY<=8) openExit(); });
+  let slideDone=false;
+  addEventListener("scroll",()=>{
+    if(slideDone||shownThisVisit.exit) return;
+    if(scrollY/(document.body.scrollHeight-innerHeight)>.62){ slideDone=true; if(!sessionStorage.getItem("ztr_slide")){ sessionStorage.setItem("ztr_slide","1"); $("#slideIn").classList.add("show"); } }
+  },{passive:true});
+  $("#exitPop .x").addEventListener("click",closeExit);
+  $("#popOverlay").addEventListener("click",closeExit);
+  $("#slideIn .x").addEventListener("click",()=>$("#slideIn").classList.remove("show"));
+  addEventListener("keydown",e=>{ if(e.key==="Escape"){ closeExit(); Checkout.close(); }});
+  return {closeExit};
+})();
+
+/* ================= CHECKOUT FUNNEL ================= */
+const Checkout=(function(){
+  const modal=$("#checkout"), bars=$$(".steps i",modal), steps=$$(".mstep",modal);
+  let cur=1;
+  const state=JSON.parse(localStorage.getItem("ztr_funnel")||"{}");
+  function save(){ localStorage.setItem("ztr_funnel",JSON.stringify(state)); }
+  function go(n){
+    cur=n;
+    steps.forEach(s=>s.classList.toggle("on",+s.dataset.step===n));
+    bars.forEach((b,i)=>b.classList.toggle("on",i<Math.min(n,3)));
+    if(n===3) $("#sumPlan").textContent=CONFIG.PLAN_LABELS[state.plan||"momentum"];
+  }
+  function open(plan){
+    Pop.closeExit(); $("#slideIn").classList.remove("show");
+    if(plan){ state.plan=plan; save();
+      $$('#planPick input').forEach(r=>{ r.checked=r.value===plan; r.closest("label").classList.toggle("sel",r.value===plan); });
+    }
+    modal.classList.add("show"); document.body.style.overflow="hidden"; go(1);
+  }
+  function close(){ modal.classList.remove("show"); document.body.style.overflow=""; }
+  document.addEventListener("click",e=>{
+    const t=e.target.closest("[data-open-checkout]"); if(t){ open(t.dataset.plan); return; }
+    if(e.target.closest("[data-close-checkout]")||e.target===modal) close();
+    if(e.target.closest("#checkout .x")) close();
+    if(e.target.closest("[data-back]")) go(cur-1);
+    if(e.target.closest("[data-next]")){
+      if(cur===2 && !validate()) return;
+      go(cur+1);
+    }
+  });
+  $$('#planPick input').forEach(r=>r.addEventListener("change",()=>{
+    state.plan=r.value; save();
+    $$('#planPick label').forEach(l=>l.classList.toggle("sel",$("input",l).checked));
+  }));
+  function validate(){
+    let ok=true;
+    ["f-name","f-email","f-biz"].forEach(id=>{
+      const f=$("#"+id), bad=!f.value.trim()||(id==="f-email"&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value));
+      f.closest(".field").classList.toggle("err",bad); if(bad) ok=false;
+    });
+    if(ok){ state.name=$("#f-name").value; state.email=$("#f-email").value; state.business=$("#f-biz").value; state.website=$("#f-web").value; state.goal=$("#f-goal").value; save(); }
+    return ok;
+  }
+  $("#submitTrial").addEventListener("click",async()=>{
+    const btn=$("#submitTrial"); btn.disabled=true; btn.textContent="Starting…";
+    const payload={...state, source:"zattari.com", ts:new Date().toISOString()};
+    let sent=false;
+    if(CONFIG.LEAD_ENDPOINT){
+      try{ const r=await fetch(CONFIG.LEAD_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}); sent=r.ok; }catch(_){}
+    }
+    if(!sent){
+      location.href=`mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent("Free trial — "+(payload.business||payload.name))}&body=${encodeURIComponent("Plan: "+CONFIG.PLAN_LABELS[payload.plan||"momentum"]+"\nName: "+payload.name+"\nEmail: "+payload.email+"\nBusiness: "+payload.business+"\nWebsite: "+(payload.website||"—")+"\nGoal: "+payload.goal)}`;
+    }
+    btn.disabled=false; btn.innerHTML='Start my free trial <span class="arr">→</span>';
+    go(4); burst();
+    const link=CONFIG.STRIPE_LINKS[state.plan];
+    if(link) setTimeout(()=>window.open(link,"_blank"),1200); // day-7 checkout handled via Stripe trial link when configured
+  });
+  return {open,close};
+})();
+
+/* ================= CONFETTI ================= */
+function burst(){
+  if(reduced) return;
+  const cv=$("#confetti"), ctx=cv.getContext("2d");
+  cv.width=innerWidth*devicePixelRatio; cv.height=innerHeight*devicePixelRatio;
+  const ps=Array.from({length:120},()=>({x:cv.width/2,y:cv.height*.42,vx:(Math.random()-.5)*22*devicePixelRatio,vy:(Math.random()*-16-4)*devicePixelRatio,s:(Math.random()*7+3)*devicePixelRatio,c:Math.random()<.55?"#D8FF3A":(Math.random()<.5?"#F3EFE6":"#9A97A3"),r:Math.random()*Math.PI,life:90+Math.random()*40}));
+  (function f(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    let alive=false;
+    ps.forEach(p=>{ if(p.life-->0){ alive=true; p.vy+=.55*devicePixelRatio; p.x+=p.vx; p.y+=p.vy; p.r+=.1;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r); ctx.fillStyle=p.c; ctx.globalAlpha=Math.min(1,p.life/40); ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6); ctx.restore(); }});
+    if(alive) requestAnimationFrame(f); else ctx.clearRect(0,0,cv.width,cv.height);
+  })();
+}
+</script>
+</body>
+</html>
